@@ -1,0 +1,21 @@
+.title__wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.logo__footer {
+    margin: 0;
+}
+.footer__title {
+    color: var(--color-white);
+    margin-left: 20px;
+}
+.footer__img {
+    height: 40px;
+    width: 40px;
+}
+.social__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
