@@ -8,11 +8,11 @@ import './Header.css';
 const Header = ({ siteTitle }) => (
   <header className="header">
     <div className="container header__container">
-      <h1 className="title header__title">
+      <h3 className="title header__title">
         <Link to="/" className="link header__link">
           {siteTitle}
         </Link>
-      </h1>
+      </h3>
       <nav className="navigation">
         <Link to="/" className="link navigation__link"> List of directors </Link>
       </nav>
