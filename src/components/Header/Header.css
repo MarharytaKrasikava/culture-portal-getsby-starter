@@ -11,6 +11,7 @@
 .container {
     max-width: 1800px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .link {
     text-decoration: none;
@@ -28,4 +29,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+}
+body {
+    overflow-x: hidden;
 }

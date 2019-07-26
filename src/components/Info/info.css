@@ -1,0 +1,37 @@
+.title__info {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    width: 100%;
+    text-align: center;
+}
+.section--info {
+    background-color: #999999;
+    padding: 70px 30px 30px;
+}
+.info__description {
+    margin: 30px 0 0 30px;
+    text-align: justify;
+    z-index: 5;
+    color: var(--color-white);
+    max-width: 70%;
+    text-indent: 50px;
+}
+.info__container {
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+.info__image {
+    position: absolute;
+    right: -60px;
+    bottom: -190px;
+    height: 700px;
+    z-index: 1;
+}
+.description__wrapper {
+    margin-top: 40px;
+    position: relative;
+    z-index: 5;
+}

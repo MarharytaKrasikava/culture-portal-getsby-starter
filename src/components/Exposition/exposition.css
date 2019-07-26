@@ -1,9 +1,10 @@
 .section {
-    height: calc(100vh - 40px);
+    height:100vh;
 }
 .section--exposition {
     background: url('../../images/68238.jpg') no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    height: calc(100vh - 40px);
 }
 .exposition__container {
     width: 100%;
