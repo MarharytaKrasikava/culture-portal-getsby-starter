@@ -6,14 +6,15 @@
 }
 .section--info {
     background-color: #999999;
-    padding: 70px 30px 30px;
+    padding: 70px 30px 100px;
+    
 }
 .info__description {
     margin: 30px 0 0 30px;
     text-align: justify;
     z-index: 5;
     color: var(--color-white);
-    max-width: 70%;
+    max-width: 50%;
     text-indent: 50px;
 }
 .info__container {

@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import Main from '../components/Exposition/exposition';
 import SEO from '../components/seo';
 import Info from '../components/Info/info';
+import DayAuthor from '../components/DayAuthor/dayAuthor';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -13,6 +14,10 @@ const IndexPage = () => {
         siteMetadata {
           mainTitle
           infoText
+          dayAuthorTitle
+          dayAuthorName
+          dayAuthorYearsLife
+          dayAuthorInfo
         }
       }
     }
@@ -23,6 +28,12 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Main mainTitle={data.site.siteMetadata.mainTitle} />
       <Info infoText={data.site.siteMetadata.infoText}> </Info>
+      <DayAuthor
+        dayAuthorTitle={data.site.siteMetadata.dayAuthorTitle}
+        dayAuthorName={data.site.siteMetadata.dayAuthorName}
+        dayAuthorYearsLife={data.site.siteMetadata.dayAuthorYearsLife}
+        dayAuthorInfo={data.site.siteMetadata.dayAuthorInfo}
+      />
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );
