@@ -6,6 +6,7 @@ import Main from '../components/Exposition/exposition';
 import SEO from '../components/seo';
 import Info from '../components/Info/info';
 import DayAuthor from '../components/DayAuthor/dayAuthor';
+import Developers from '../components/Developers/developers';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +35,7 @@ const IndexPage = () => {
         dayAuthorYearsLife={data.site.siteMetadata.dayAuthorYearsLife}
         dayAuthorInfo={data.site.siteMetadata.dayAuthorInfo}
       />
+      <Developers />
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );

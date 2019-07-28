@@ -1,0 +1,9 @@
+.section__developers {
+  min-height: 900px;
+  background-color: var(--color-5);
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+.container__title {
+    text-align: center;
+}
