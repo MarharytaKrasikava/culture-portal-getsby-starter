@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     fontSize: '2rem',
     border: '3px solid var(--color-primary)',
     color: 'var(--color-white)',
-    background: 'var(--color-primary)',
+    background: 'var(--color-pale-red)',
     textTransform: 'none',
   },
   input: {

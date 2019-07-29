@@ -21,13 +21,15 @@ const useStyles = makeStyles(() => ({
   cardName: {
     textAlign: 'center',
     height: '3em',
+    fontSize: '2rem',
+    lineHeight: '1.2',
   },
   cardMedia: {
     paddingTop: '100%',
   },
   cardContent: {
     flexGrow: 1,
-    backgroundColor: 'var(--color-6)',
+    backgroundColor: 'var(--color-dark-red)',
     color: 'white',
   },
 }));
