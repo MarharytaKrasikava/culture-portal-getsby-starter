@@ -1,0 +1,25 @@
+.cardName {
+  text-align: center;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 960px) {
+  .MuiContainer-maxWidthMd {
+      max-width: 1800px;
+  }
+  #card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      max-width: none;
+      flex-basis: 20%;
+  }
+  .cardContainer {
+      padding: 12px;
+  }
+}
