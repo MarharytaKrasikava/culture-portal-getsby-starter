@@ -36,7 +36,6 @@ const IndexPage = () => {
         dayAuthorInfo={data.site.siteMetadata.dayAuthorInfo}
       />
       <Developers />
-      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );
 };

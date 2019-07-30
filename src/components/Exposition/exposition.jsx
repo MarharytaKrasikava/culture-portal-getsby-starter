@@ -1,4 +1,4 @@
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import '../variables.css';
@@ -11,7 +11,9 @@ const Exposition = ({ mainTitle }) => (
       <h1 className="title exposition__title">
         {mainTitle}
       </h1>
-      <OutlineButton />
+      <OutlineButton>
+        <Link to="/page-2/" className="link navigation__link" />
+      </OutlineButton>
     </div>
   </section>
 );
