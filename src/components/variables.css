@@ -4,5 +4,7 @@ body {
     --color-3: #333333;
     --color-4: #444444;
     --color-white: #ffffff;
-    --color-5: #871D1D;
+    --color-dark-red: #871D1D;
+    --color-pale-red: #933838;
+    --color-medium-red: #D12626;
 }

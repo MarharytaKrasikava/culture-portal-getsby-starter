@@ -24,12 +24,14 @@ const authors = [
     name: 'Kolifa',
   },
 ]
+import authors from '../components/authors';
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
     <Search authors={authors} />
-    <TimelineElement />
+    <TimelineElement author={authors.KorshSablin} />
+    <Link to="/">Go back to the homepage</Link>
   </Layout>
 );
 

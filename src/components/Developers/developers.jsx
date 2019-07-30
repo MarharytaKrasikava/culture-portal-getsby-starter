@@ -1,22 +1,13 @@
 import React from 'react';
-// import AppBar from '@material-ui/core/AppBar';
-// import Button from '@material-ui/core/Button';
-// import CameraIcon from '@material-ui/icons/PhotoCamera';
-import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-// import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import githubIcon from '../../images/social/GitHub.png';
+// import { graphql } from 'gatsby';
+import Card from '../Card/card';
 import '../layout.css';
 import '../variables.css';
 import './developers.css';
-// import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   heroContent: {
@@ -83,8 +74,26 @@ const cards = [
   },
 ];
 
-export default function Album() {
+/* export const pageQuery = graphql`
+  query cardMarkdown {
+    allMarkdownRemark(relativePath: { eq: "markdown/cards" }) {
+      frontmatter {
+        cards {
+          number
+          name
+          github
+          photo
+        }
+      }
+    }
+  }
+`; */
+
+export default function Exposition() {
   const classes = useStyles();
+  /* const { markdownRemark } = data;
+  const { frontmatter } = markdownRemark;
+  const { cards } = frontmatter; */
 
   return (
     <React.Fragment>
@@ -92,33 +101,25 @@ export default function Album() {
       <section className="section section__developers">
         <div className={classes.heroContent}>
           <Container className="title container__title" maxWidth="sm">
-            <h1>
-              Developers Team
-            </h1>
+            <h1>Developers Team</h1>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
-          <Grid className="cardContainer" container justify="center" alignItems="center" spacing={4}>
+          <Grid
+            className="cardContainer"
+            container
+            justify="center"
+            alignItems="center"
+            spacing={4}
+          >
             {cards.map(card => (
-              <Grid id="card" item key={card.number} xs={12} sm={6} md={4}>
-                <Card>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image={card.photo}
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography className={classes.cardName} gutterBottom variant="h6" component="h2">
-                      {card.name}
-                    </Typography>
-                    <Typography>
-                      <a href={card.github} target="_blank" rel="noopener noreferrer" className="social__link">
-                        <img src={githubIcon} alt="github" className="footer__img" />
-                      </a>
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
+              <Card
+                key={card.number}
+                cardNumber={card.number}
+                cardName={card.name}
+                cardGithub={card.github}
+                cardPhoto={card.photo}
+              />
             ))}
           </Grid>
         </Container>

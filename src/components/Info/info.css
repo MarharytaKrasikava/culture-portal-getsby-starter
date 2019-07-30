@@ -5,9 +5,9 @@
     text-align: center;
 }
 .section--info {
-    background-color: #999999;
+    background-color: var(--color-dark-red);
     padding: 70px 30px 100px;
-    
+
 }
 .info__description {
     margin: 30px 0 0 30px;
@@ -19,7 +19,7 @@
 }
 .info__container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     height: 100%;
     align-items: center;
     position: relative;
