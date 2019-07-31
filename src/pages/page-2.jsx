@@ -5,8 +5,9 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TimelineElement from '../components/Timeline/timeline';
 import Search from '../components/Search/search';
+import authors from '../components/authors';
 
-const authors = [
+const authorsInfo = [
   {
     id: 1,
     name: 'Scott',
@@ -24,12 +25,12 @@ const authors = [
     name: 'Kolifa',
   },
 ]
-import authors from '../components/authors';
+
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <Search authors={authors} />
+    <Search authors={authorsInfo} />
     <TimelineElement author={authors.KorshSablin} />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
