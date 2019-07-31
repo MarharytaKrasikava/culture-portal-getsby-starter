@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
   button: {
     marginTop: '20px',
     fontSize: '2rem',
-    border: '3px solid var(--color-primary)',
+    border: '3px solid var(--color-white)',
     color: 'var(--color-white)',
     background: 'var(--color-pale-red)',
     textTransform: 'none',

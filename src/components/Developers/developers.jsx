@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-// import { graphql } from 'gatsby';
 import Card from '../Card/card';
 import '../layout.css';
 import '../variables.css';
@@ -41,59 +41,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const cards = [
-  {
-    number: 1,
-    name: 'Uladzislau Khliabets',
-    github: 'https://github.com/vladislavkhlebec',
-    photo: 'https://avatars3.githubusercontent.com/u/43673398?s=400&v=4',
-  },
-  {
-    number: 2,
-    name: 'Marharyta Krasikava',
-    github: 'https://github.com/MarharytaKrasikava',
-    photo: 'https://avatars3.githubusercontent.com/u/47751829?s=400&v=4',
-  },
-  {
-    number: 3,
-    name: 'Vladislav Priakhine',
-    github: 'https://github.com/vladji',
-    photo: 'https://avatars1.githubusercontent.com/u/47819058?s=400&v=4',
-  },
-  {
-    number: 4,
-    name: 'Nikita Turlyka',
-    github: 'https://github.com/hhh1361',
-    photo: 'https://avatars2.githubusercontent.com/u/47751762?s=400&v=4',
-  },
-  {
-    number: 5,
-    name: 'Pavel Yermakov',
-    github: 'https://github.com/PavelYermakov1',
-    photo: 'https://avatars1.githubusercontent.com/u/47759016?s=400&v=4',
-  },
-];
-
-/* export const pageQuery = graphql`
-  query cardMarkdown {
-    allMarkdownRemark(relativePath: { eq: "markdown/cards" }) {
-      frontmatter {
-        cards {
-          number
-          name
-          github
-          photo
-        }
-      }
-    }
-  }
-`; */
-
-export default function Exposition() {
+export default function Exposition({ edges }) {
   const classes = useStyles();
-  /* const { markdownRemark } = data;
-  const { frontmatter } = markdownRemark;
-  const { cards } = frontmatter; */
 
   return (
     <React.Fragment>
@@ -112,13 +61,13 @@ export default function Exposition() {
             alignItems="center"
             spacing={4}
           >
-            {cards.map(card => (
+            {edges.map(edge => (
               <Card
-                key={card.number}
-                cardNumber={card.number}
-                cardName={card.name}
-                cardGithub={card.github}
-                cardPhoto={card.photo}
+                key={edge.node.frontmatter.number}
+                cardNumber={edge.node.frontmatter.number}
+                cardName={edge.node.frontmatter.name}
+                cardGithub={edge.node.frontmatter.github}
+                cardPhoto={edge.node.frontmatter.photo}
               />
             ))}
           </Grid>
@@ -127,3 +76,11 @@ export default function Exposition() {
     </React.Fragment>
   );
 }
+
+Exposition.propTypes = {
+  edges: PropTypes.arrayOf(PropTypes.object),
+};
+
+Exposition.defaultProps = {
+  edges: [],
+};
