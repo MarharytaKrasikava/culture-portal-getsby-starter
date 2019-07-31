@@ -1,5 +1,5 @@
 ---
-id: card
+title: card
 number: 2
 path: /pages/markdown/cards
 name: Marharyta Krasikava

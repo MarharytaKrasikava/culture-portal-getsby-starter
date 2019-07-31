@@ -1,5 +1,5 @@
 ---
-id: card
+title: card
 number: 4
 path: /pages/markdown/cards
 name: Nikita Turlyka

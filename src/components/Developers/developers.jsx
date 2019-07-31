@@ -4,7 +4,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { graphql } from 'gatsby';
 import Card from '../Card/card';
 import '../layout.css';
 import '../variables.css';
@@ -41,19 +40,6 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
   },
 }));
-
-export const markdownFrontmatterFragment = graphql`
-  fragment CardMarkdownFrontmatter on MarkdownRemark {
-    frontmatter {
-      github
-      name
-      number
-      path
-      photo
-      title
-    }
-  }
-`;
 
 export default function Exposition({ edges }) {
   const classes = useStyles();

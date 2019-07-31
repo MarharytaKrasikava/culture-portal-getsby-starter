@@ -1,5 +1,5 @@
 ---
-id: card
+title: card
 number: 1
 path: /pages/markdown/cards
 name: Uladzislau Khliabets

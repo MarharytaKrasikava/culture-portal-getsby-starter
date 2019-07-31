@@ -1,5 +1,5 @@
 ---
-id: card
+title: card
 number: 5
 path: /pages/markdown/cards
 name: Pavel Yermakov

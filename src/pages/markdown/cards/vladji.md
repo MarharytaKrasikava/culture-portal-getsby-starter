@@ -1,5 +1,5 @@
 ---
-id: card
+title: card
 number: 3
 path: /pages/markdown/cards
 name: Vladislav Priakhine
