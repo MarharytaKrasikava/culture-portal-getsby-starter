@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TimelineElement from '../components/Timeline/timeline';
 import Search from '../components/Search/search';
+import YoutubeElement from '../components/Youtube/youtube';
 import authors from '../components/authors';
 
 const authorsInfo = [
@@ -24,7 +25,7 @@ const authorsInfo = [
     id: 4,
     name: 'Kolifa',
   },
-]
+];
 
 
 const SecondPage = () => (
@@ -32,6 +33,7 @@ const SecondPage = () => (
     <SEO title="Page two" />
     <Search authors={authorsInfo} />
     <TimelineElement author={authors.KorshSablin} />
+    <YoutubeElement author={authors.KorshSablin} />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );

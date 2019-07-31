@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import React from 'react';
 
