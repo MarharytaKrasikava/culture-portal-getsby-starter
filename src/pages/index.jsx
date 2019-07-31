@@ -21,6 +21,16 @@ const IndexPage = () => {
           dayAuthorInfo
         }
       }
+      cards: allMarkdownRemark (
+        sort: {fields: [frontmatter___number]}
+        filter: {frontmatter: {id: {eq: "card"}}}
+        ) {
+        edges {
+          node {
+            ...CardMarkdownFrontmatter
+          }
+        }
+      }
     }
   `);
 
@@ -35,7 +45,9 @@ const IndexPage = () => {
         dayAuthorYearsLife={data.site.siteMetadata.dayAuthorYearsLife}
         dayAuthorInfo={data.site.siteMetadata.dayAuthorInfo}
       />
-      <Developers />
+      <Developers
+        edges={data.cards.edges}
+      />
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );
