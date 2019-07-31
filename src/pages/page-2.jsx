@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TimelineElement from '../components/Timeline/timeline';
+import YoutubeElement from '../components/Youtube/youtube';
 import authors from '../components/authors';
 
 const SecondPage = () => (
@@ -12,6 +13,7 @@ const SecondPage = () => (
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
     <TimelineElement author={authors.KorshSablin} />
+    <YoutubeElement author={authors.KorshSablin} />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );
