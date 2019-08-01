@@ -1,4 +1,5 @@
 ---
+path: /Nechaev
 title: director
 directorsName: Leonid Alexeyevich Nechayev
 directorsLifeYears: May 1939 – 24 January 2010

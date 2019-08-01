@@ -16,33 +16,25 @@ import './layout.css';
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      allMarkdownRemark (
-        filter: {frontmatter: {title: {eq: "BCJ.by"}}}
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              footerTitle
-              github
-            }
-          }
+      markdownRemark (frontmatter: {title: {eq: "homepage"}}) {
+        frontmatter {
+          siteTitle
+          footerTitle
+          github
         }
       }
     }
   `);
 
-  console.log(data);
-
   return (
     <>
-      <Header siteTitle={data.allMarkdownRemark.edges[0].node.frontmatter.title} />
+      <Header siteTitle={data.markdownRemark.frontmatter.siteTitle} />
       <main>
         {children}
       </main>
       <Footer
-        footerTitle={data.allMarkdownRemark.edges[0].node.frontmatter.footerTitle}
-        githubLink={data.allMarkdownRemark.edges[0].node.frontmatter.github}
+        footerTitle={data.markdownRemark.frontmatter.footerTitle}
+        githubLink={data.markdownRemark.frontmatter.github}
       />
     </>
   );
