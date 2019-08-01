@@ -10,14 +10,46 @@ import Developers from '../components/Developers/developers';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query SiteMainTitleQuery {
-      site {
-        siteMetadata {
-          mainTitle
-          infoText
-          dayAuthorTitle
-          dayAuthorName
-          dayAuthorYearsLife
-          dayAuthorInfo
+      dayDirector: allMarkdownRemark (
+        filter: {frontmatter: {directorsName: {eq: "Leonid Alexeyevich Nechayev"}}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              directorsName
+              directorsLifeYears
+              directorsInfo
+            }
+          }
+        }
+      }
+      info: allMarkdownRemark (
+        filter: {frontmatter: {title: {eq: "info"}}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              mainTitle
+              text
+            }
+          }
+        }
+      }
+      cards: allMarkdownRemark (
+        sort: {fields: [frontmatter___number]}
+        filter: {frontmatter: {title: {eq: "card"}}}
+        ) {
+        edges {
+          node {
+            frontmatter {
+              github
+              name
+              number
+              path
+              photo
+              title
+            }
+          }
         }
       }
     }
@@ -26,13 +58,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Main mainTitle={data.site.siteMetadata.mainTitle} />
-      <Info infoText={data.site.siteMetadata.infoText}> </Info>
+      <Main mainTitle={data.info.edges[0].node.frontmatter.mainTitle} />
+      <Info infoText={data.info.edges[0].node.frontmatter.text}> </Info>
       <DayAuthor
-        dayAuthorTitle={data.site.siteMetadata.dayAuthorTitle}
-        dayAuthorName={data.site.siteMetadata.dayAuthorName}
-        dayAuthorYearsLife={data.site.siteMetadata.dayAuthorYearsLife}
-        dayAuthorInfo={data.site.siteMetadata.dayAuthorInfo}
+        dayAuthorTitle={data.info.edges[0].node.frontmatter.dayDirectorTitle}
+        dayAuthorName={data.dayDirector.edges[0].node.frontmatter.directorsName}
+        dayAuthorYearsLife={data.dayDirector.edges[0].node.frontmatter.directorsLifeYears}
+        dayAuthorInfo={data.dayDirector.edges[0].node.frontmatter.directorsInfo}
+      />
+      <Developers
+        edges={data.cards.edges}
       />
       <Developers />
     </Layout>

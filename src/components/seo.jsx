@@ -16,21 +16,28 @@ function SEO({
   meta,
   title,
 }) {
-  const { site } = useStaticQuery(
+  const site = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+        allMarkdownRemark (
+          filter: {frontmatter: {title: {eq: "BCJ.by"}}}
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                description
+                author
+              }
+            }
           }
         }
       }
     `,
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description
+  || site.allMarkdownRemark.edges[0].node.frontmatter.description;
 
   return (
     <Helmet
@@ -38,7 +45,7 @@ function SEO({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${site.allMarkdownRemark.edges[0].node.frontmatter.title}`}
       meta={[
         {
           name: 'description',
@@ -62,7 +69,7 @@ function SEO({
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author,
+          content: site.allMarkdownRemark.edges[0].node.frontmatter.author,
         },
         {
           name: 'twitter:title',
