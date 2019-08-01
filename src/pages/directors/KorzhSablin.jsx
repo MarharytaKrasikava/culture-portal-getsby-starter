@@ -4,6 +4,7 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import TimelineElement from '../../components/Timeline/timeline';
 import YoutubeElement from '../../components/Youtube/youtube';
+import Map from '../../components/Map/map';
 import authors from '../../components/authors';
 import TitleTwoPage from '../../components/Title2page/title';
 
@@ -34,7 +35,8 @@ const SecondPage = () => {
       <div className="rightcolumn__wrapper">
         <TitleTwoPage />
         <TimelineElement author={authors.KorshSablin} />
-        <YoutubeElement author={podgon} />
+        <YoutubeElement author={authors.KorshSablin} />
+        <Map author={authors.KorshSablin} />
       </div>
     </Layout>
   );
