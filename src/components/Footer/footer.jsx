@@ -7,7 +7,7 @@ import './footer.css';
 
 
 const Header = ({ footerTitle, githubLink }) => (
-  <header className="header footer">
+  <footer className="header footer">
     <div className="container header__container">
       <div className="title__wrapper">
         <img src={logo} alt="logo" className=" footer__img logo__footer" />
@@ -19,7 +19,7 @@ const Header = ({ footerTitle, githubLink }) => (
         <img src={githubIcon} alt="github" className="footer__img social__img" />
       </a>
     </div>
-  </header>
+  </footer>
 );
 
 Header.propTypes = {

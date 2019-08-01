@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import AuthorListItem from '../AuthorListItem/authorListItem';
+import AuthorList from '../AuthorsList/authorList';
+import './search.css';
 
 class Search extends Component {
   state = {
@@ -12,23 +15,49 @@ class Search extends Component {
     });
   }
 
-  render() {
-    const filteredContacts = this.props.authors.filter(
-      author => author.name.toLowerCase().indexOf(this.state.search) !== -1,
+  renderItems() {
+    const { search } = this.state;
+    const { authors } = this.props;
+    // console.log(typeOf(authors));
+    const filteredContacts = authors.filter(
+      author => author.name.toLowerCase().indexOf(search) !== -1,
     );
     return (
-      <div>
-        <input
-          type="text"
-          value={this.state.search}
-          onChange={this.updateSearch}
-        />
-        <ul>
-          { filteredContacts.map(author => <AuthorListItem author={author} key={author.id} />) }
-        </ul>
+      filteredContacts.map(author => <AuthorListItem author={author} key={author.id} />)
+    );
+  }
+
+  render() {
+    const { search } = this.state;
+    const items = this.renderItems();
+    return (
+      <div className="authorlist__container">
+        <div className="search__wrapper">
+          <input
+            type="text"
+            value={search}
+            onChange={this.updateSearch}
+            className="search"
+          />
+        </div>
+        <div className="authorlist__wrapper">
+          <AuthorList>
+            { items }
+          </AuthorList>
+        </div>
       </div>
     );
   }
 }
+
+Search.propTypes = {
+  authors: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  })),
+};
+Search.defaultProps = {
+  authors: '',
+};
 
 export default Search;

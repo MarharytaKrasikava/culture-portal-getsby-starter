@@ -12,7 +12,7 @@ const Exposition = ({ mainTitle }) => (
         {mainTitle}
       </h1>
       <OutlineButton>
-        <Link to="/page-2/" className="link navigation__link" />
+        <Link to="/AuthorsPage/" className="link navigation__link" />
       </OutlineButton>
     </div>
   </section>

@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h3>
       <nav className="navigation">
-        <Link to="/page-2/" className="link navigation__link"> List of directors </Link>
+        <Link to="/AuthorsPage/" className="link navigation__link"> List of directors </Link>
       </nav>
     </div>
   </header>

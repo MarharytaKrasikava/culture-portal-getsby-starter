@@ -6,12 +6,6 @@ import {
 
 const initialState = { isLoading: false, results: [], value: '' };
 
-// const source = _.times(5, () => ({
-//   title: 'faker.company.companyName()',
-//   description: faker.company.catchPhrase(),
-//   image: faker.internet.avatar(),
-//   price: faker.finance.amount(0, 100, 2, '$'),
-// }));
 const source = [
   {
     title: ' Egorov Egor',
@@ -40,7 +34,6 @@ export default class SearchExampleStandard extends Component {
 
   handleResultSelect = (e, { result }) => {
     this.setState({ value: result.title });
-    console.log('select', this.state);
   }
 
   handleSearchChange = (e, { value }) => {
@@ -57,7 +50,6 @@ export default class SearchExampleStandard extends Component {
         results: _.filter(source, isMatch),
       });
     }, 300);
-    console.log(this.state);
   }
 
   render() {

@@ -31,10 +31,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>
         {children}
-      </main> 
+      </main>
       <Footer
-        footerTitle={data.site.siteMetadata.footerTitle} 
-        githubLink={data.site.siteMetadata.github} 
+        footerTitle={data.site.siteMetadata.footerTitle}
+        githubLink={data.site.siteMetadata.github}
       />
     </>
   );
