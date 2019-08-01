@@ -1,0 +1,20 @@
+.search {
+  width: 100%;
+}
+.authorlist__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 88vh;
+}
+.search__wrapper {
+  width: 30%;
+  margin-top: 30px;
+}
+.authorlist__wrapper {
+  width: 50%;
+  text-align: center;
+  font-size: 1.4rem;
+  word-spacing: 15px;
+}
