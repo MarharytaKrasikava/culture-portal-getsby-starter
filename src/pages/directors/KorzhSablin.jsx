@@ -5,6 +5,7 @@ import SEO from '../../components/seo';
 import TimelineElement from '../../components/Timeline/timeline';
 import YoutubeElement from '../../components/Youtube/youtube';
 import authors from '../../components/authors';
+import TitleTwoPage from '../../components/Title2page/title';
 
 
 const SecondPage = () => {
@@ -31,11 +32,12 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
       <div className="rightcolumn__wrapper">
+        <TitleTwoPage />
         <TimelineElement author={authors.KorshSablin} />
         <YoutubeElement author={podgon} />
       </div>
     </Layout>
-  )
+  );
 };
 
 export default SecondPage;
