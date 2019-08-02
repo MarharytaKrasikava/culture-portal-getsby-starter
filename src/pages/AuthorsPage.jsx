@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Search from '../components/Search/search';
-import './page2.css';
 
 const authorsInfo = [
   {
@@ -35,7 +34,7 @@ const authorsInfo = [
 
 
 const SecondPage = () => {
-  const data = useStaticQuery(graphql`
+  useStaticQuery(graphql`
     query SecondPage {
       allMarkdownRemark {
         edges {
@@ -53,8 +52,7 @@ const SecondPage = () => {
       }
     }
   `);
-  console.log(data);
-  return(
+  return (
     <Layout>
       <SEO title="Page two" />
       <Search authors={authorsInfo} />
