@@ -1,5 +1,5 @@
 ---
-path: /Nechaev
+path: /Nechaev-en
 type: director
 title: Leonid Alexeyevich Nechayev
 directorsLifeYears: May 1939 – 24 January 2010
