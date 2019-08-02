@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/layout';
@@ -33,7 +34,7 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
       <div className="rightcolumn__wrapper">
-        <TitleTwoPage />
+        <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement author={authors.KorshSablin} />
         <YoutubeElement author={authors.KorshSablin} />
         <Map author={authors.KorshSablin} />
