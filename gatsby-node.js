@@ -3,7 +3,7 @@ const path = require('path');
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const authorPageTemplate = path.resolve('src/templates/authorPage.jsx');
+  const directorsPageTemplate = path.resolve('src/templates/directorsPage.jsx');
 
   return graphql(`
     {
@@ -15,6 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              imagepath
             }
           }
         }
@@ -27,8 +28,10 @@ exports.createPages = ({ actions, graphql }) => {
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: authorPageTemplate,
-        context: {}, // additional data can be passed via context
+        component: directorsPageTemplate,
+        context: {
+          imagepath: node.frontmatter.imagepath,
+        }, // additional data can be passed via context
       });
     });
   });

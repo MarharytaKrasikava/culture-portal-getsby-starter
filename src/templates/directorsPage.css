@@ -1,0 +1,22 @@
+.directors__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.directors__years {
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+.directors__info {
+  max-width: 1200px;
+}
+
+.directors__image {
+  min-width: 320px;
+}
+

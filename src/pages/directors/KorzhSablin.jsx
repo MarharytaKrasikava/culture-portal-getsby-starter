@@ -32,7 +32,7 @@ const SecondPage = () => {
   const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Korsh-Sablin" />
       <div className="rightcolumn__wrapper">
         <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement timeline={authors.KorshSablin.timeline} />
