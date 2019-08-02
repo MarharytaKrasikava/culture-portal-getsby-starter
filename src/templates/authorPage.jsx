@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import TimelineElement from '../components/Timeline/timeline';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +10,7 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.directorsName}</h1>
+        <h1>{frontmatter.title}</h1>
         {/* <div>
           <img width="900" height="588" src={frontmatter.image} alt="Yuri-Khashchavacki" />
         </div> */}
@@ -20,6 +21,7 @@ export default function Template({
           <p>
             {frontmatter.directorsInfo}
           </p>
+          <TimelineElement timeline={frontmatter.timeline} />
         </div>
       </div>
     </div>
@@ -29,9 +31,13 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
         frontmatter {
-          directorsName
+          title
           directorsLifeYears
           directorsInfo
+          timeline {
+            date
+            description
+          }
         }
       }
     }`;

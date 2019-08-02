@@ -8,7 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        filter: {frontmatter: {title: {eq: "director"}}}
+        filter: {frontmatter: {type: {eq: "director"}}}
         limit: 1000
         ) {
         edges {

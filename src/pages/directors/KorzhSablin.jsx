@@ -35,7 +35,7 @@ const SecondPage = () => {
       <SEO title="Page two" />
       <div className="rightcolumn__wrapper">
         <TitleTwoPage author={authors.KorshSablin} />
-        <TimelineElement author={authors.KorshSablin} />
+        <TimelineElement timeline={authors.KorshSablin.timeline} />
         <YoutubeElement author={authors.KorshSablin} />
         <Map author={authors.KorshSablin} />
       </div>

@@ -10,9 +10,9 @@ import Developers from '../components/Developers/developers';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query SiteMainTitleQuery {
-      dayDirector: markdownRemark (frontmatter: {directorsName: {eq: "Leonid Alexeyevich Nechayev"}}) {
+      dayDirector: markdownRemark (frontmatter: {title: {eq: "Leonid Alexeyevich Nechayev"}}) {
         frontmatter {
-          directorsName
+          title
           directorsLifeYears
           directorsInfo
         }
