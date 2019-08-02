@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/layout';
@@ -8,6 +7,7 @@ import YoutubeElement from '../../components/Youtube/youtube';
 import Map from '../../components/Map/map';
 import authors from '../../components/authors';
 import TitleTwoPage from '../../components/Title2page/title';
+import Gallery from '../../components/Gallery/gallery';
 
 
 const SecondPage = () => {
@@ -29,7 +29,7 @@ const SecondPage = () => {
       }
     }
   `);
-  const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
+  // const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
       <SEO title="Page two" />
@@ -37,6 +37,7 @@ const SecondPage = () => {
         <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement timeline={authors.KorshSablin.timeline} />
         <YoutubeElement author={authors.KorshSablin} />
+        <Gallery />
         <Map author={authors.KorshSablin} />
       </div>
     </Layout>

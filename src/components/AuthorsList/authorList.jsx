@@ -10,7 +10,7 @@ const AuthorList = (props) => {
       { children }
     </ul>
   );
-}
+};
 
 AuthorList.propTypes = {
   children: PropTypes.node,
