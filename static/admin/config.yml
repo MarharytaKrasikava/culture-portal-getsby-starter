@@ -1,15 +1,22 @@
 backend:
   name: github
   repo: vladislavkhlebec/culture-portal-getsby-starter
-media_folder: static/assets
+media_folder: src/images
 public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/markdown/directors
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
+      - { name: type, label: Type }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: directorsLifeYears, label: Director's Years of Life, widget: string }
+      - { name: directorsInfo, label: Director's Info, widget: string }
+      - label: Timeline
+        name: timeline
+        widget: list
+        fields:
+           - {label: Date, name: date, widget: string}
+           - {label: Description, name: description, widget: string}

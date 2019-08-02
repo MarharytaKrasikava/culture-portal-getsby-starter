@@ -5,7 +5,7 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import React from 'react';
 
 
-function TimelineItems(props) {
+export default function TimelineComponent({ timeline }) {
   const colorArray = [
     '#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
     '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
@@ -20,7 +20,7 @@ function TimelineItems(props) {
   return (
     <React.Fragment>
       <Timeline lineColor="#ddd">
-        {props.author.timeline.map((element, index) => (
+        {timeline.map((element, index) => (
           <TimelineItem
             key={element.date}
             dateText={element.date}
@@ -31,11 +31,5 @@ function TimelineItems(props) {
         ))}
       </Timeline>
     </React.Fragment>
-  );
-}
-
-export default function TimelineComponent(props) {
-  return (
-    TimelineItems(props)
   );
 }

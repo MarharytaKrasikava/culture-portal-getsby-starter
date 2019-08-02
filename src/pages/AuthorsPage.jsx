@@ -8,8 +8,8 @@ import './page2.css';
 const authorsInfo = [
   {
     id: 1,
-    name: 'Scott ScottScott ScottScottScott',
-    link: '/directors/KorzhSablin/',
+    name: 'Leonid Alexeyevich Nechayev',
+    link: '/Nechaev',
   },
   {
     id: 2,

@@ -1,31 +1,43 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Layout from '../components/layout';
-import TimeLine from '../components/Timeline/timeline';
+import { graphql } from 'gatsby';
+import TimelineElement from '../components/Timeline/timeline';
 
-const AuthorPageTemplate = ({
-  title,
-  timeline,
-  youtubeLink
-}) => {
-
+export default function Template({
+  data, // this prop will be injected by the GraphQL query below.
+}) {
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
+  const { frontmatter } = markdownRemark;
   return (
-    <Layout>
-      <TimeLine author={timeline} />
-    </Layout>
-  )
+    <div className="blog-post-container">
+      <div className="blog-post">
+        <h1>{frontmatter.title}</h1>
+        {/* <div>
+          <img width="900" height="588" src={frontmatter.image} alt="Yuri-Khashchavacki" />
+        </div> */}
+        <div className="blog-post-content">
+          <p>
+            {frontmatter.directorsLifeYears}
+          </p>
+          <p>
+            {frontmatter.directorsInfo}
+          </p>
+          <TimelineElement timeline={frontmatter.timeline} />
+        </div>
+      </div>
+    </div>
+  );
 }
-
-AuthorPageTemplate.propTypes = {
-  title: PropTypes.string,
-  timeline: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-  }))
-}
-AuthorPageTemplate.defaultProps = {
-  title: '',
-  timeline: '',
-};
-
-export default AuthorPageTemplate;
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+        frontmatter {
+          title
+          directorsLifeYears
+          directorsInfo
+          timeline {
+            date
+            description
+          }
+        }
+      }
+    }`;

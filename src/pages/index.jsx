@@ -10,29 +10,17 @@ import Developers from '../components/Developers/developers';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query SiteMainTitleQuery {
-      dayDirector: allMarkdownRemark (
-        filter: {frontmatter: {directorsName: {eq: "Leonid Alexeyevich Nechayev"}}}
-      ) {
-        edges {
-          node {
-            frontmatter {
-              directorsName
-              directorsLifeYears
-              directorsInfo
-            }
-          }
+      dayDirector: markdownRemark (frontmatter: {title: {eq: "Leonid Alexeyevich Nechayev"}}) {
+        frontmatter {
+          title
+          directorsLifeYears
+          directorsInfo
         }
       }
-      info: allMarkdownRemark (
-        filter: {frontmatter: {title: {eq: "info"}}}
-      ) {
-        edges {
-          node {
-            frontmatter {
-              mainTitle
-              text
-            }
-          }
+      info: markdownRemark (frontmatter: {title: {eq: "info"}}) {
+        frontmatter {
+          mainTitle
+           text
         }
       }
       cards: allMarkdownRemark (
@@ -58,18 +46,17 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Main mainTitle={data.info.edges[0].node.frontmatter.mainTitle} />
-      <Info infoText={data.info.edges[0].node.frontmatter.text}> </Info>
+      <Main mainTitle={data.info.frontmatter.mainTitle} />
+      <Info infoText={data.info.frontmatter.text}> </Info>
       <DayAuthor
-        dayAuthorTitle={data.info.edges[0].node.frontmatter.dayDirectorTitle}
-        dayAuthorName={data.dayDirector.edges[0].node.frontmatter.directorsName}
-        dayAuthorYearsLife={data.dayDirector.edges[0].node.frontmatter.directorsLifeYears}
-        dayAuthorInfo={data.dayDirector.edges[0].node.frontmatter.directorsInfo}
+        dayAuthorTitle={data.info.frontmatter.dayDirectorTitle}
+        dayAuthorName={data.dayDirector.frontmatter.directorsName}
+        dayAuthorYearsLife={data.dayDirector.frontmatter.directorsLifeYears}
+        dayAuthorInfo={data.dayDirector.frontmatter.directorsInfo}
       />
       <Developers
         edges={data.cards.edges}
       />
-      <Developers />
     </Layout>
   );
 };
