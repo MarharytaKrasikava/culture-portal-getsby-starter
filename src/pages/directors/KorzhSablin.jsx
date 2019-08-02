@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import TimelineElement from '../../components/Timeline/timeline';
 import YoutubeElement from '../../components/Youtube/youtube';
+import Map from '../../components/Map/map';
 import authors from '../../components/authors';
+import TitleTwoPage from '../../components/Title2page/title';
 
 
 const SecondPage = () => {
@@ -31,11 +34,13 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
       <div className="rightcolumn__wrapper">
+        <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement author={authors.KorshSablin} />
-        <YoutubeElement author={podgon} />
+        <YoutubeElement author={authors.KorshSablin} />
+        <Map author={authors.KorshSablin} />
       </div>
     </Layout>
-  )
+  );
 };
 
 export default SecondPage;
