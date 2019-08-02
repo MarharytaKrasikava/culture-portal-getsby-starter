@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import TimelineElement from '../../components/Timeline/timeline';
-import YoutubeElement from '../../components/Youtube/youtube';
+import YoutubeModalWindow from '../../components/YoutubeModalWindow/YoutubeModalWindow';
 import Map from '../../components/Map/map';
 import authors from '../../components/authors';
 import TitleTwoPage from '../../components/Title2page/title';
@@ -36,12 +36,11 @@ const SecondPage = () => {
       <div className="rightcolumn__wrapper">
         <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement timeline={authors.KorshSablin.timeline} />
-        <YoutubeElement author={authors.KorshSablin} />
         <Gallery />
+        <YoutubeModalWindow author={authors.KorshSablin.youtube} />
         <Map author={authors.KorshSablin} />
       </div>
     </Layout>
   );
 };
-
 export default SecondPage;
