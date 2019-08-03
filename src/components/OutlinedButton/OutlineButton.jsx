@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles(() => ({
   button: {
@@ -16,12 +18,24 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function OutlinedButtons() {
+export default function OutlinedButtons(props) {
   const classes = useStyles();
-
+  const { to, css } = props;
   return (
     <Button variant="outlined" className={classes.button}>
+      <Link to={to} className={css}>
         Learn more
+      </Link>
     </Button>
   );
 }
+
+OutlinedButtons.propTypes = {
+  to: PropTypes.string,
+  css: PropTypes.string,
+
+};
+OutlinedButtons.defaultProps = {
+  to: '',
+  css: '',
+};
