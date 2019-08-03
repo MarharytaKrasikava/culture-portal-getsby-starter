@@ -3,7 +3,7 @@ import Popup from 'reactjs-popup';
 import YoutubePlayer from 'react-youtube-player';
 import './YoutubeModalWindow.css';
 
-export default function YoutubeModalWindow(youtube) {
+export default function YoutubeModalWindow(param) {
   return (
     <Popup
       // eslint-disable-next-line react/button-has-type
@@ -13,7 +13,7 @@ export default function YoutubeModalWindow(youtube) {
     >
       <div style={{ height: '400px' }}>
         <YoutubePlayer
-          videoId={youtube.author}
+          videoId={param.youtube}
           playbackState="unstarted"
           configuration={
           {
