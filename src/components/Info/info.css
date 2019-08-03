@@ -14,7 +14,6 @@
     text-align: justify;
     z-index: 5;
     color: var(--color-white);
-    max-width: 50%;
     text-indent: 50px;
 }
 .info__container {
@@ -35,4 +34,17 @@
     margin-top: 40px;
     position: relative;
     z-index: 5;
+}
+@media (min-width: 1441px) {
+  .info__description {
+    max-width: 50%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .info__description {
+    max-width: 100%;
+    font-size: 2rem;
+  }
 }

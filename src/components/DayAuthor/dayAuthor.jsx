@@ -19,7 +19,7 @@ const Exposition = ({
       </h3>
       <div className="wrapper__dayauthor">
         <div className="photoAuthor__wrapper">
-          <img src={authorImage} alt="photoAuthor__image" className="photoAuthor__image" />
+          <img src={authorImage} style={{ width: '320px' }} alt="photoAuthor__image" className="photoAuthor__image" />
         </div>
         <div className="wrapper__column wrapper__column--authorday">
           <h3 className="dayauthor__name">

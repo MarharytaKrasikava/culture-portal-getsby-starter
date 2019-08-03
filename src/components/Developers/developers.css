@@ -22,9 +22,9 @@
 
 @media (min-width: 960px) {
     .MuiContainer-maxWidthMd {
-        max-width: none;
+        max-width: none !important;
     }
-    .cardContainer {
+    .container__card {
         padding: 12px;
     }
 }

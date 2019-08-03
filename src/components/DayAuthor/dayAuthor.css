@@ -1,5 +1,4 @@
 .section__dayauthor {
-  min-height: 900px;
   background-color: var(--color-4);
   color: var(--color-white);
   font-size: 1.2rem;
@@ -13,13 +12,7 @@
 .dayauthor__title {
   font-size: 2.5rem;
 }
-.wrapper__dayauthor {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  border: 2px solid white;
-  padding: 20px;
-}
+
 .photoAuthor__wrapper {
   width: 40%;
 }
@@ -50,4 +43,32 @@
 .photoAuthor__wrapper {
   display: flex;
   justify-content: center;
+}
+.wrapper__dayauthor {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  padding: 20px;
+}
+@media (min-width: 769px) {
+  .wrapper__dayauthor {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper__dayauthor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper__column--authorday {
+  width: 100%;
+  text-align: center;
+  }
+
+  .photoAuthor__wrapper {
+    width: 100%;
+  }
 }

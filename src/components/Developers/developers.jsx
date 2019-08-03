@@ -22,23 +22,6 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(2),
     maxWidth: '100%',
   },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    maxWidth: 'none',
-  },
-  cardName: {
-    textAlign: 'center',
-  },
-  cardMedia: {
-    paddingTop: '100%',
-  },
-  cardContent: {
-    flexGrow: 1,
-    backgroundColor: 'var(--color-2)',
-    color: 'white',
-  },
 }));
 
 export default function Exposition({ edges }) {
@@ -55,7 +38,7 @@ export default function Exposition({ edges }) {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid
-            className="cardContainer"
+            className="container__card"
             container
             justify="center"
             alignItems="center"
