@@ -11,7 +11,6 @@ const Exposition = ({
   dayAuthorInfo,
   dayAuthorName,
   dayAuthorYearsLife,
-
 }) => (
   <section className="section section__dayauthor">
     <div className=" container container__dayauthor">
@@ -33,7 +32,10 @@ const Exposition = ({
             {dayAuthorInfo}
           </p>
           <div className="button__wrapper">
-            <OutlineButton />
+            <OutlineButton
+              to="/directors/ru/KorshSablin"
+              css="link navigation__link"
+            />
           </div>
         </div>
       </div>
