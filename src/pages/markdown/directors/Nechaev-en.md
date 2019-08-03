@@ -1,5 +1,5 @@
 ---
-lang: en
+lang: 'en'
 path: /Nechaev
 imagepath: Authors/Nechaev/Nechaev_Leonid_Alekseevich.jpg
 type: director
