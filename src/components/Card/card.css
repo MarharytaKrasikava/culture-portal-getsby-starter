@@ -8,7 +8,7 @@
   justify-content: center;
   height: 100%;
 }
-@media (min-width: 960px) {
+@media (min-width: 1025px) {
   .MuiContainer-maxWidthMd {
       max-width: 1800px;
   }
@@ -18,7 +18,13 @@
       flex-direction: column;
       flex-basis: 20%;
   }
-  .cardContainer {
-      padding: 12px;
+  .cardName {
+    width: 100%,
+  }
+}
+
+@media (min-width: 600px) {
+  .cardName {
+    width: 7em,
   }
 }
