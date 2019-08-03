@@ -7,8 +7,8 @@ import Search from '../components/Search/search';
 const authorsInfo = [
   {
     id: 1,
-    name: 'Leonid Alexeyevich Nechayev',
-    link: '/Nechaev',
+    name: 'Vladimir Vladimirovich Korsh-Sablin',
+    link: '/directors/ru/KorshSablin',
   },
   {
     id: 2,
