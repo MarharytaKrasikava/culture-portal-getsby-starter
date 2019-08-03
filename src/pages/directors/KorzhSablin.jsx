@@ -28,19 +28,28 @@ const SecondPage = () => {
           }
         }
       }
+      allFile(
+        filter: {relativeDirectory: {eq: "Authors\\KorshSablin\\gallery"}}
+        ) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
     }
   `);
-  // const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Korsh-Sablin" />
       <div className="rightcolumn__wrapper">
         <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement timeline={authors.KorshSablin.timeline} />
         <ListOfWorks listOfWorks={authors.KorshSablin.listOfWorks} />
-        <Gallery />
+        <Gallery edges={data.allFile.edges} />
         <YoutubeModalWindow youtube={authors.KorshSablin.youtube} />
-        <Map author={authors.KorshSablin} />
+        <Map geolocation={authors.KorshSablin.geolocation} />
       </div>
     </Layout>
   );

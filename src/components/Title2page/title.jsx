@@ -10,7 +10,7 @@ import authorImage from '../../images/Authors/KorshSablin/KorshSablin.jpg';
 export default function TitleTwoPage(props) {
   return (
     <React.Fragment>
-      <div className="title">
+      <div className="data">
 
         <div className="image-title"><img src={authorImage} alt="1" /></div>
         <div className="name-title">
