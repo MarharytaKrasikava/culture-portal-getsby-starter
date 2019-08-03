@@ -20,7 +20,7 @@ const IndexPage = () => {
       info: markdownRemark (frontmatter: {title: {eq: "info"}}) {
         frontmatter {
           mainTitle
-           text
+          text
         }
       }
       cards: allMarkdownRemark (

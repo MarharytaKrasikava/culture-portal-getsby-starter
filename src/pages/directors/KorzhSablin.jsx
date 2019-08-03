@@ -29,7 +29,7 @@ const SecondPage = () => {
       }
     }
   `);
-  // const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
+  const podgon = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
       <SEO title="Page two" />

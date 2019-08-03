@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import TimelineElement from '../components/Timeline/timeline';
+import TimelineComponent from '../components/Timeline/timeline';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -21,7 +21,7 @@ export default function Template({
           <p>
             {frontmatter.directorsInfo}
           </p>
-          <TimelineElement timeline={frontmatter.timeline} />
+          <TimelineComponent timeline={frontmatter.timeline} />
         </div>
       </div>
     </div>

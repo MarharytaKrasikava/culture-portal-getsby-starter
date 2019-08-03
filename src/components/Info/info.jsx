@@ -12,7 +12,7 @@ const Exposition = ({ infoText }) => (
       <h3 className="title title__info">Some info about:</h3>
       <div className="description__wrapper">
         <p className="info__description">{infoText}</p>
-      </div>      
+      </div>
       <img className="info__image" src={bg} alt="camera" />
     </div>
   </section>
