@@ -8,7 +8,7 @@ export default function ListOfWorks(param) {
       <tbody>
         {param.listOfWorks.map(element => (
           <tr className="film_row" key={element.id}>
-            <td className="date">{element.date}</td>
+            <td className="date">{element.year}</td>
             <td className="film">{element.film}</td>
           </tr>
         ))}

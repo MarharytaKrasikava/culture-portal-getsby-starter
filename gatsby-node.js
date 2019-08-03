@@ -16,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               imagepath
+              gallery
             }
           }
         }
@@ -31,6 +32,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: directorsPageTemplate,
         context: {
           imagepath: node.frontmatter.imagepath,
+          gallery: `Authors\\${node.frontmatter.gallery}\\gallery`,
         }, // additional data can be passed via context
       });
     });
