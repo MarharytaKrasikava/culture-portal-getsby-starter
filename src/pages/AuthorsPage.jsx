@@ -30,11 +30,6 @@ const authorsInfo = [
     name: 'Jorg JorgJorg JorgJorgJorg',
     link: '/directors/KorzhSablin/',
   },
-  {
-    id: 6,
-    name: 'goga',
-    link: '/goga',
-  },
 ];
 
 
