@@ -10,11 +10,13 @@ import Developers from '../components/Developers/developers';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query SiteMainTitleQuery {
-      dayDirector: markdownRemark (frontmatter: {title: {eq: "Leonid Alexeyevich Nechayev"}}) {
+      dayDirector: markdownRemark (frontmatter: {title: {eq: "Владимир Владимирович Корш-Саблин"}}) {
         frontmatter {
           title
           directorsLifeYears
           directorsInfo
+          titleText
+          imagepath
         }
       }
       info: markdownRemark (frontmatter: {title: {eq: "info"}}) {
@@ -50,9 +52,9 @@ const IndexPage = () => {
       <Info infoText={data.info.frontmatter.text}> </Info>
       <DayAuthor
         dayAuthorTitle={data.info.frontmatter.dayDirectorTitle}
-        dayAuthorName={data.dayDirector.frontmatter.directorsName}
+        dayAuthorName={data.dayDirector.frontmatter.title}
         dayAuthorYearsLife={data.dayDirector.frontmatter.directorsLifeYears}
-        dayAuthorInfo={data.dayDirector.frontmatter.directorsInfo}
+        dayAuthorInfo={data.dayDirector.frontmatter.titleText}
       />
       <Developers
         edges={data.cards.edges}

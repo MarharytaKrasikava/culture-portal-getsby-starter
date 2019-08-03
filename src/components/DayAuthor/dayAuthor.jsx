@@ -4,7 +4,7 @@ import React from 'react';
 import '../variables.css';
 import './dayAuthor.css';
 import OutlineButton from '../OutlinedButton/OutlineButton';
-import authorImage from '../../images/Authors/Nechaev/Nechaev_Leonid_Alekseevich.jpg';
+import authorImage from '../../images/Authors/KorshSablin/KorshSablin.jpg';
 
 const Exposition = ({
   dayAuthorTitle,
