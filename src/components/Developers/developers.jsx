@@ -53,7 +53,7 @@ export default function Exposition({ edges }) {
             <h1>Developers Team</h1>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth="none">
           <Grid
             className="cardContainer"
             container
