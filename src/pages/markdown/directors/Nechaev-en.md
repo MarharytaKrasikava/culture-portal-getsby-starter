@@ -1,6 +1,6 @@
 ---
 lang: ru
-path: /KorshSablin
+path: /directors/ru/KorshSablin
 imagepath: Authors/KorshSablin/KorshSablin.jpg
 type: director
 title: Владимир Владимирович Корш-Саблин
