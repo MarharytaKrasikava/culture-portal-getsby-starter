@@ -8,7 +8,7 @@ const authorsInfo = [
   {
     id: 1,
     name: 'Leonid Alexeyevich Nechayev',
-    link: '/Nechaev',
+    link: '/directors/ru/KorshSablin',
   },
   {
     id: 2,

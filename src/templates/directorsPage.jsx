@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 import TimelineElement from '../components/Timeline/timeline';
 import ListOfWorks from '../components/ListOfWorks/listOfWorks';
@@ -11,16 +12,14 @@ import Map from '../components/Map/map';
 import '../components/layout.css';
 import './directorsPage.css';
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { director } = data; // data.markdownRemark holds our post data
+export default function Template({ data }) {
+  const { director } = data;
   const { frontmatter } = director;
   const { gallery } = data;
   const titleImage = data.titleImage.childImageSharp.fluid;
-  console.log(data);
   return (
     <Layout>
+      <SEO title={frontmatter.title} />
       <div className="directors__container">
         <h1>{frontmatter.title}</h1>
         <div className="directors__image">

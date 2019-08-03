@@ -1,6 +1,6 @@
 ---
 lang: 'en'
-path: /Nechaev
+path: /directors/en/Nechaev
 imagepath: Authors/Nechaev/Nechaev_Leonid_Alekseevich.jpg
 type: director
 title: Leonid Alexeyevich Nechayev
