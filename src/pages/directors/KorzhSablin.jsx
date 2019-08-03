@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import TimelineElement from '../../components/Timeline/timeline';
+import ListOfWorks from '../../components/ListOfWorks/listOfWorks';
 import YoutubeModalWindow from '../../components/YoutubeModalWindow/YoutubeModalWindow';
 import Map from '../../components/Map/map';
 import authors from '../../components/authors';
@@ -36,8 +37,9 @@ const SecondPage = () => {
       <div className="rightcolumn__wrapper">
         <TitleTwoPage author={authors.KorshSablin} />
         <TimelineElement timeline={authors.KorshSablin.timeline} />
+        <ListOfWorks listOfWorks={authors.KorshSablin.listOfWorks} />
         <Gallery />
-        <YoutubeModalWindow author={authors.KorshSablin.youtube} />
+        <YoutubeModalWindow youtube={authors.KorshSablin.youtube} />
         <Map author={authors.KorshSablin} />
       </div>
     </Layout>
