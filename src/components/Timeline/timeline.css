@@ -4,3 +4,9 @@
 .entry .body {
   margin-bottom: 30px;
 }
+@media (max-width: 1440px) {
+  .timeline--wrapper {
+    width: 100%;
+  }
+
+}
