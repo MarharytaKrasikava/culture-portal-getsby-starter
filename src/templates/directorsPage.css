@@ -6,6 +6,9 @@
   font-size: 1.2rem;
   line-height: 1.7;
   padding: 50px 0;
+  background-image: linear-gradient(to top, #532626 0%, #b1acaa 30%, #fffcf7 100%);
+  background: linear-gradient(to bottom, #f3ebeb, #758b91);
+  background: linear-gradient(to bottom, #e6dada, #274046);
 }
 
 .directors__years {
@@ -14,10 +17,19 @@
 }
 
 .directors__info {
-  max-width: 1200px;
+  max-width: 1400px;
+  text-align: justify;
+  margin: auto;
 }
 
 .directors__image {
   min-width: 320px;
+  border: 2px solid rgb(59, 22, 22)
 }
+@media (max-width: 1440px) {
+  .directors__info {
+    width: 95%;
+    margin: auto;
+  }
 
+}
