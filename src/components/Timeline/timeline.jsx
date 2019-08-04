@@ -23,7 +23,7 @@ export default function TimelineComponent({ timeline }) {
       <Timeline lineColor="#ddd">
         {timeline.map((element, index) => (
           <TimelineItem
-            key={element.date}
+            key={element.description}
             dateText={element.date}
             dateInnerStyle={{ background: colorArray[index], color: '#333' }}
           >
