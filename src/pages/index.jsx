@@ -12,59 +12,6 @@ import Developers from '../components/Developers/developers';
 localStorage.setItem('lang', 'en');
 
 const IndexPage = () => {
-  // let data;
-  /* switch (lang) {
-    case 'en':
-      data = en;
-      break;
-    case 'be':
-      data = be;
-      break;
-    default:
-      data = en;
-  } */
-  /* const en = useStaticQuery(graphql`
-    query SiteMainTitleQueryEn {
-      dayDirector: markdownRemark (frontmatter: {title: {eq: "Владимир Владимирович Корш-Саблин"}}) {
-        frontmatter {
-          title
-          directorsLifeYears
-          directorsInfo
-          titleText
-          imagepath
-        }
-      }
-      info: markdownRemark (frontmatter: {title: {eq: "info"}, lang: { eq: "en" }}) {
-        frontmatter {
-          mainTitle
-          text
-        }
-      }
-      homepage: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "en" }}) {
-        frontmatter {
-          button
-          developers
-        }
-      }
-      cards: allMarkdownRemark (
-        sort: {fields: [frontmatter___number]}
-        filter: {frontmatter: {title: {eq: "card"}}}
-        ) {
-        edges {
-          node {
-            frontmatter {
-              github
-              name
-              number
-              path
-              photo
-              title
-            }
-          }
-        }
-      }
-    }
-  `); */
   const query = useStaticQuery(graphql`
     query SiteMainTitleQueryBe {
       dayDirectorEn: markdownRemark(
@@ -186,6 +133,13 @@ const IndexPage = () => {
       <Main
         mainTitle={data.info.frontmatter.mainTitle}
         buttonText={data.homepage.frontmatter.button}
+        descLine1={data.info.frontmatter.descLine1}
+        descLine2={data.info.frontmatter.descLine2}
+        descLine3={data.info.frontmatter.descLine3}
+        descLine4={data.info.frontmatter.descLine4}
+        descLine5={data.info.frontmatter.descLine5}
+        descLine6={data.info.frontmatter.descLine6}
+        descLine7={data.info.frontmatter.descLine7}
       />
       <Info
         infoText={data.info.frontmatter.text}
