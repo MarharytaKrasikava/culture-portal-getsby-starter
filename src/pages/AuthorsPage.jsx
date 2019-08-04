@@ -16,18 +16,18 @@ const authorsInfo = [
   },
   {
     id: 3,
-    name: 'Jony JonyJony JonyJonyJony',
-    link: '/directors/KorzhSablin/',
+    name: 'Yurij Cvetkov',
+    link: '/directors/ru/Tcvetkov',
   },
   {
     id: 4,
-    name: 'Kolifa KolifaKolifa KolifaKolifaKolifa',
-    link: '/directors/KorzhSablin/',
+    name: 'Viktor Turov',
+    link: '/directors/ru/Turov',
   },
   {
     id: 5,
-    name: 'Jorg JorgJorg JorgJorgJorg',
-    link: '/directors/KorzhSablin/',
+    name: 'Valerij Rubinchik',
+    link: '/directors/ru/Rubinchik',
   },
 ];
 
