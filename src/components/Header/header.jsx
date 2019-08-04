@@ -5,7 +5,7 @@ import '../variables.css';
 import './Header.css';
 
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, listLitle }) => (
   <header className="header">
     <div className="container header__container">
       <h3 className="title header__title">
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h3>
       <nav className="navigation">
-        <Link to="/AuthorsPage/" className="link navigation__link"> List of directors </Link>
+        <Link to="/AuthorsPage/" className="link navigation__link"> {listLitle} </Link>
       </nav>
     </div>
   </header>

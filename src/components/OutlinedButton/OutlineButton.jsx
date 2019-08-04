@@ -20,11 +20,12 @@ const useStyles = makeStyles(() => ({
 
 export default function OutlinedButtons(props) {
   const classes = useStyles();
-  const { to, css } = props;
+  const { to, css, text } = props;
+  console.log(props);
   return (
     <Button variant="outlined" className={classes.button}>
       <Link to={to} className={css}>
-        Learn more
+        {text}
       </Link>
     </Button>
   );
@@ -33,9 +34,10 @@ export default function OutlinedButtons(props) {
 OutlinedButtons.propTypes = {
   to: PropTypes.string,
   css: PropTypes.string,
-
+  text: PropTypes.string,
 };
 OutlinedButtons.defaultProps = {
   to: '',
   css: '',
+  text: '',
 };

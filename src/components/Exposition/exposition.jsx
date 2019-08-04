@@ -4,7 +4,7 @@ import '../variables.css';
 import './exposition.css';
 import OutlineButton from '../OutlinedButton/OutlineButton';
 
-const Exposition = ({ mainTitle, descLine1, descLine2, descLine3, descLine4, descLine5, descLine6, descLine7 }) => (
+const Exposition = ({ mainTitle, buttonText, descLine1, descLine2, descLine3, descLine4, descLine5, descLine6, descLine7 }) => (
   <section className="section section--exposition">
     <div className="container exposition__container">
       <h1 className="title exposition__title">
@@ -35,6 +35,7 @@ const Exposition = ({ mainTitle, descLine1, descLine2, descLine3, descLine4, des
       <OutlineButton
         to="/AuthorsPage"
         css="link navigation__link"
+        text={buttonText}
       />
     </div>
   </section>
@@ -42,6 +43,7 @@ const Exposition = ({ mainTitle, descLine1, descLine2, descLine3, descLine4, des
 
 Exposition.propTypes = {
   mainTitle: PropTypes.string,
+  buttonText: PropTypes.string,
   descLine1: PropTypes.string,
   descLine2: PropTypes.string,
   descLine3: PropTypes.string,
@@ -53,6 +55,7 @@ Exposition.propTypes = {
 
 Exposition.defaultProps = {
   mainTitle: '',
+  buttonText: '',
   descLine1: '',
   descLine2: '',
   descLine3: '',
