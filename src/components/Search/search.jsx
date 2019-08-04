@@ -18,7 +18,6 @@ class Search extends Component {
   renderItems() {
     const { search } = this.state;
     const { authors } = this.props;
-    // console.log(typeOf(authors));
     const filteredContacts = authors.filter(
       author => author.name.toLowerCase().indexOf(search) !== -1,
     );
