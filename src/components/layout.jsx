@@ -9,11 +9,12 @@ import './layout.css';
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "en" }}) {
+      markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
         frontmatter {
           siteTitle
           footerTitle
           github
+          listLitle
         }
       }
     }
@@ -21,7 +22,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.markdownRemark.frontmatter.siteTitle} />
+      <Header
+        siteTitle={data.markdownRemark.frontmatter.siteTitle}
+        listLitle={data.markdownRemark.frontmatter.listLitle}
+      />
       <main>
         {children}
       </main>
