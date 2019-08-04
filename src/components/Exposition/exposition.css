@@ -1,22 +1,65 @@
 .section--exposition {
-    background: url('../../images/68238.jpg') no-repeat;
-    background-size: cover;
-    height: calc(100vh - 40px);
+  background: url('../../images/68238.jpg') no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 .exposition__container {
-    max-width: 600px;
-    height: 100%;
-    margin: 0 10%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  flex-direction: column;
 }
 .exposition__title {
-    font-size: 3.2rem;
-    text-align: center;
-    color: var(--color-primary);
+margin-top: 50px;
+font-size: 7rem;
+text-align: center;
+color: rgb(44, 5, 5);
 }
 .button {
-    font-size: 2rem;
+  font-size: 2rem;
+}
+
+.exposition__container div p {
+margin-top: 100px;
+width: 100%;
+font-style: italic;
+}
+
+
+@media (max-width: 1440px) {
+.exposition__title {
+  font-size: 5rem;
+}
+.exposition__container {
+  margin-left: 0px;
+}
+}
+
+@media (max-width: 800px) {
+.exposition__title {
+  font-size: 3rem;
+  margin-top: 20px;
+  width: 60%;
+}
+.exposition__container {
+  margin-left: 0px;
+}
+}
+
+@media (max-width: 480px) {
+.exposition__title {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.exposition__container {
+  margin-left: 0px;
+  min-width: 300px;
+}
+.exposition__container div p {
+  font-size: 0.7rem;
+}
 }
