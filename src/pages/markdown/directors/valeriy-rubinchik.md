@@ -89,19 +89,19 @@ youtube: HPB8z_s3buU
 geolocation:
   - description: He studied at school number 42 in Minsk
     id: '1'
-    latitude: 53
-    longitude: 27
+    latitude: 53.9106655
+    longitude: 27.4189919
   - description: >-
       He worked as a laborer, assistant director, assistant and director at the
       "Belarusfilm"  studio in Minsk
     id: '2'
-    latitude: 53
-    longitude: 27
+    latitude: 53.926980
+    longitude: 27.630014
   - description: >-
       He graduated from three courses of the Belarusian Theater and Art
       Institute in Minsk
     id: '3'
-    latitude: 53
-    longitude: 27
+    latitude: 53.922589
+    longitude: 27.601054
 ---
 
