@@ -1,3 +1,16 @@
 .gallery__container {
     margin-top: 100px;
 }
+
+.carousel .slide img {
+    width: inherit;
+    height: 500px;
+}
+
+.carousel .thumb, .carousel img {
+    width: inherit;
+}
+
+.carousel .thumb img {
+    height: 100px;
+}
