@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+// import Languages from '../components/Content/content';
 import Layout from '../components/layout';
 import Main from '../components/Exposition/exposition';
 import SEO from '../components/seo';
@@ -8,7 +9,7 @@ import DayAuthor from '../components/DayAuthor/dayAuthor';
 import Developers from '../components/Developers/developers';
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
+  const en = useStaticQuery(graphql`
     query SiteMainTitleQuery {
       dayDirector: markdownRemark (frontmatter: {title: {eq: "Владимир Владимирович Корш-Саблин"}}) {
         frontmatter {
@@ -23,6 +24,12 @@ const IndexPage = () => {
         frontmatter {
           mainTitle
           text
+        }
+      }
+      homepage: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "en" }}) {
+        frontmatter {
+          button
+          developers
         }
       }
       cards: allMarkdownRemark (
@@ -48,16 +55,21 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Main mainTitle={data.info.frontmatter.mainTitle} />
-      <Info infoText={data.info.frontmatter.text}> </Info>
+      <Main
+        mainTitle={en.info.frontmatter.mainTitle}
+        buttonText={en.homepage.frontmatter.button}
+      />
+      <Info infoText={en.info.frontmatter.text}> </Info>
       <DayAuthor
-        dayAuthorTitle={data.info.frontmatter.dayDirectorTitle}
-        dayAuthorName={data.dayDirector.frontmatter.title}
-        dayAuthorYearsLife={data.dayDirector.frontmatter.directorsLifeYears}
-        dayAuthorInfo={data.dayDirector.frontmatter.titleText}
+        dayAuthorTitle={en.info.frontmatter.dayDirectorTitle}
+        dayAuthorName={en.dayDirector.frontmatter.title}
+        dayAuthorYearsLife={en.dayDirector.frontmatter.directorsLifeYears}
+        dayAuthorInfo={en.dayDirector.frontmatter.titleText}
+        buttonText={en.homepage.frontmatter.button}
       />
       <Developers
-        edges={data.cards.edges}
+        edges={en.cards.edges}
+        developersTitle={en.homepage.frontmatter.developers}
       />
     </Layout>
   );

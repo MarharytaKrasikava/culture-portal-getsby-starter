@@ -1,9 +1,8 @@
 ---
-lang: en
+lang: be
 title: homepage
 siteTitle: BCJ.by
-button: Learn more
-developers: Developers Team
-footerTitle: Belarusian Cinema Jungle
+button: Чытаць далей
+footerTitle: Джунглі беларускага кіно
 github: https://github.com/vladislavkhlebec/culture-portal-getsby-starter
 ---

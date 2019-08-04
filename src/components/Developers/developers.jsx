@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Exposition({ edges }) {
+export default function Exposition({ edges, developersTitle }) {
   const classes = useStyles();
 
   return (
@@ -33,7 +33,7 @@ export default function Exposition({ edges }) {
       <section className="section section__developers">
         <div className={classes.heroContent}>
           <Container className="title container__title" maxWidth="sm">
-            <h1>Developers Team</h1>
+            <h1>{developersTitle}</h1>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
@@ -61,9 +61,11 @@ export default function Exposition({ edges }) {
 }
 
 Exposition.propTypes = {
+  developersTitle: PropTypes.string,
   edges: PropTypes.arrayOf(PropTypes.object),
 };
 
 Exposition.defaultProps = {
   edges: [],
+  developersTitle: '',
 };
