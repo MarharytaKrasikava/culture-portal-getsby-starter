@@ -22,6 +22,13 @@ const IndexPage = () => {
       info: markdownRemark (frontmatter: {title: {eq: "info"}}) {
         frontmatter {
           mainTitle
+          descLine1
+          descLine2
+          descLine3
+          descLine4
+          descLine5
+          descLine6
+          descLine7
           text
         }
       }
@@ -48,7 +55,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Main mainTitle={data.info.frontmatter.mainTitle} />
+      <Main
+        mainTitle={data.info.frontmatter.mainTitle}
+        descLine1={data.info.frontmatter.descLine1}
+        descLine2={data.info.frontmatter.descLine2}
+        descLine3={data.info.frontmatter.descLine3}
+        descLine4={data.info.frontmatter.descLine4}
+        descLine5={data.info.frontmatter.descLine5}
+        descLine6={data.info.frontmatter.descLine6}
+        descLine7={data.info.frontmatter.descLine7}
+      />
       <Info infoText={data.info.frontmatter.text}> </Info>
       <DayAuthor
         dayAuthorTitle={data.info.frontmatter.dayDirectorTitle}
