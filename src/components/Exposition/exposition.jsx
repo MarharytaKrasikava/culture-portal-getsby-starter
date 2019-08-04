@@ -43,9 +43,7 @@ const Exposition = ({ mainTitle, buttonText, descLine1, descLine2, descLine3, de
 
 Exposition.propTypes = {
   mainTitle: PropTypes.string,
-<<<<<<< HEAD
   buttonText: PropTypes.string,
-=======
   descLine1: PropTypes.string,
   descLine2: PropTypes.string,
   descLine3: PropTypes.string,
@@ -53,14 +51,11 @@ Exposition.propTypes = {
   descLine5: PropTypes.string,
   descLine6: PropTypes.string,
   descLine7: PropTypes.string,
->>>>>>> eba28d953f4ce1708dc837d150d4a7539c3c5ac9
 };
 
 Exposition.defaultProps = {
   mainTitle: '',
-<<<<<<< HEAD
   buttonText: '',
-=======
   descLine1: '',
   descLine2: '',
   descLine3: '',
@@ -68,7 +63,6 @@ Exposition.defaultProps = {
   descLine5: '',
   descLine6: '',
   descLine7: '',
->>>>>>> eba28d953f4ce1708dc837d150d4a7539c3c5ac9
 };
 
 export default Exposition;

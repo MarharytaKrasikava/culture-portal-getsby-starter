@@ -32,7 +32,7 @@ export default function Exposition({ edges, developersTitle }) {
       <CssBaseline />
       <section className="section section__developers">
         <div className={classes.heroContent}>
-          <Container className="title container__title" maxWidth="sm">
+          <Container className="title container__title" maxWidth="md">
             <h1>{developersTitle}</h1>
           </Container>
         </div>

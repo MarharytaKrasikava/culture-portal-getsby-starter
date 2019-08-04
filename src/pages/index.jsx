@@ -1,10 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// import Languages from '../components/Content/content';
 import Layout from '../components/layout';
 import Main from '../components/Exposition/exposition';
 import SEO from '../components/seo';
-// import List from '../components/List/list';
 import Info from '../components/Info/info';
 import DayAuthor from '../components/DayAuthor/dayAuthor';
 import Developers from '../components/Developers/developers';
@@ -33,6 +31,13 @@ const IndexPage = () => {
           text
           dayDirectorTitle
           infoTitle
+          descLine1
+          descLine2
+          descLine3
+          descLine4
+          descLine5
+          descLine6
+          descLine7
         }
       }
       homepageBe: markdownRemark(
@@ -69,6 +74,14 @@ const IndexPage = () => {
           text
           dayDirectorTitle
           infoTitle
+          infoTitle
+          descLine1
+          descLine2
+          descLine3
+          descLine4
+          descLine5
+          descLine6
+          descLine7
         }
       }
       homepageEn: markdownRemark(
@@ -112,20 +125,17 @@ const IndexPage = () => {
         dayDirector: query.dayDirectorEn,
       };
   }
+
   const listStyles = {
     position: 'absolute',
-    top: '200px',
+    top: '20px',
     left: '200px',
-    width: '50px',
-    height: ' 50px',
   };
-
-  console.log(lang.value);
 
   return (
     <Layout>
       <SEO title={data.homepage.frontmatter.seoTitle} />
-      <select style={listStyles} value={lang.value} onChange={handleChoice} className="list__lang">
+      <select style={listStyles} value={lang.value} onChange={handleChoice}>
         <option value="en">EN</option>
         <option value="be">BE</option>
         <option value="ru">RU</option>
