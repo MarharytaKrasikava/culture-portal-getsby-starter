@@ -7,6 +7,7 @@
   width: 100%;
   align-items: center;
   height: 88vh;
+  background: url('../../images/68238.jpg') no-repeat;
 }
 .search__wrapper {
   width: 30%;
@@ -18,3 +19,4 @@
   font-size: 1.4rem;
   word-spacing: 15px;
 }
+
