@@ -28,8 +28,10 @@ export default function Template({ data }) {
         <div>
           <p className="directors__years">{frontmatter.directorsLifeYears}</p>
           <p className="directors__info">{frontmatter.directorsInfo}</p>
-          <TimelineElement timeline={frontmatter.timeline} />
-          <ListOfWorks listOfWorks={frontmatter.listOfWorks} />
+          <div className="timeline_listOfWorks" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <TimelineElement timeline={frontmatter.timeline} />
+            <ListOfWorks listOfWorks={frontmatter.listOfWorks} />
+          </div>
           <Gallery edges={gallery.edges} />
           <YoutubeModalWindow youtube={frontmatter.youtube} />
           <Map geolocation={frontmatter.geolocation} />

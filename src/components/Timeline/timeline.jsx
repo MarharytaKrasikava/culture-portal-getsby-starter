@@ -3,6 +3,7 @@
 
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import React from 'react';
+import './timeline.css';
 
 
 export default function TimelineComponent({ timeline }) {
