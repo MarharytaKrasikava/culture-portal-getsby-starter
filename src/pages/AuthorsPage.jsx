@@ -207,7 +207,7 @@ const SecondPage = () => {
         <option value="be">be</option>
         <option value="ru">ru</option>
       </select>
-      <SEO title="Page two" />
+      <SEO title="Film Directors List" />
       <Search authors={authorsInfo} />
     </Layout>
   );
