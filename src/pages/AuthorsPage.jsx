@@ -6,7 +6,7 @@ import Search from '../components/Search/search';
 
 const windowGlobal = typeof window !== 'undefined' && window;
 if (windowGlobal.localStorage) {
-  windowGlobal.localStorage.setItem('lang', 'be');
+  windowGlobal.localStorage.setItem('lang', 'en');
 }
 
 const authorsInfoEn = [

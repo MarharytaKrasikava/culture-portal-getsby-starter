@@ -10,7 +10,7 @@ import Developers from '../components/Developers/developers';
 const windowGlobal = typeof window !== 'undefined' && window;
 
 if (windowGlobal.localStorage) {
-  windowGlobal.localStorage.setItem('lang', 'be');
+  windowGlobal.localStorage.setItem('lang', 'en');
 }
 
 const IndexPage = () => {
@@ -128,7 +128,7 @@ const IndexPage = () => {
         }
       }
       homepageEn: markdownRemark(
-        frontmatter: { title: { eq: "homepage" }, lang: { eq: "be" } }
+        frontmatter: { title: { eq: "homepage" }, lang: { eq: "en" } }
       ) {
         frontmatter {
           button
