@@ -15,7 +15,7 @@ import './directorsPage.css';
 const windowGlobal = typeof window !== 'undefined' && window;
 
 if (windowGlobal.localStorage) {
-  windowGlobal.localStorage.setItem('lang', 'be');
+  windowGlobal.localStorage.setItem('lang', 'en');
 }
 
 export default function Template({ data }) {
@@ -55,7 +55,6 @@ export default function Template({ data }) {
         header: data.headerEn,
       };
   }
-  // console.log (data.directorEn);
   const { director } = transData;
   const { frontmatter } = director;
   const listStyles = {
@@ -234,7 +233,7 @@ export const pageQuery = graphql`
 
 Template.propTypes = {
   data: PropTypes.shape({
-    director: PropTypes.shape({
+    directorEn: PropTypes.shape({
       frontmatter: PropTypes.shape({
         title: PropTypes.string,
         directorsLifeYears: PropTypes.string,
@@ -243,6 +242,52 @@ Template.propTypes = {
         listOfWorks: arrayOf(PropTypes.object),
         youtube: PropTypes.string,
         geolocation: arrayOf(PropTypes.object),
+      }),
+    }),
+    directorBe: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        directorsLifeYears: PropTypes.string,
+        directorsInfo: PropTypes.string,
+        timeline: arrayOf(PropTypes.object),
+        listOfWorks: arrayOf(PropTypes.object),
+        youtube: PropTypes.string,
+        geolocation: arrayOf(PropTypes.object),
+      }),
+    }),
+    directorRu: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        directorsLifeYears: PropTypes.string,
+        directorsInfo: PropTypes.string,
+        timeline: arrayOf(PropTypes.object),
+        listOfWorks: arrayOf(PropTypes.object),
+        youtube: PropTypes.string,
+        geolocation: arrayOf(PropTypes.object),
+      }),
+    }),
+    headerBe: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        siteTitle: PropTypes.string,
+        footerTitle: PropTypes.string,
+        github: PropTypes.string,
+        listLitle: PropTypes.string,
+      }),
+    }),
+    headerEn: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        siteTitle: PropTypes.string,
+        footerTitle: PropTypes.string,
+        github: PropTypes.string,
+        listLitle: PropTypes.string,
+      }),
+    }),
+    headerRu: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        siteTitle: PropTypes.string,
+        footerTitle: PropTypes.string,
+        github: PropTypes.string,
+        listLitle: PropTypes.string,
       }),
     }),
     titleImage: PropTypes.shape({
@@ -255,6 +300,7 @@ Template.propTypes = {
     }),
   }),
 };
+
 Template.defaultProps = {
   data: '',
 };
