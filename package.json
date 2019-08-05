@@ -16,7 +16,7 @@
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-filesystem": "^2.1.7",
     "gatsby-transformer-remark": "^2.6.10",
-    "gatsby-transformer-sharp": "^2.2.4",
+    "gatsby-transformer-sharp": "^2.2.5",
     "graphql.macro": "^1.4.2",
     "lodash": "^4.17.15",
     "mapbox-gl": "^1.2.0",

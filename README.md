@@ -225,3 +225,31 @@
     </tr>
   </tbody>
 </table>
+
+1. [Task overwiev](https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-culture-portal.md)  
+2. Screenshot  
+![cbj](https://user-images.githubusercontent.com/47819058/62492785-31edd580-b7d8-11e9-91ae-1fc2cadcdac1.png)  
+3. Self test  
+**Min scope**  
+`+` 10 Main page + page with a list of authors + author's page;  
+`+` 10 Page with list of authors contains search widget;  
+`+` 20 Portal has two languages;  
+**Normal scope**  
+`+` 10 Author's page contains timeline;  
+`+` 10 Author's page contains video overlay;  
+`+` 20 Author's page contains photo gallery;  
+`+` 10 Author's page contains map (geowidget);  
+`+` from 10 to 40 Project is made using react (max 40 - if all widgets are done in React);  
+`+` from 0 to 20 Design;  
+`+` 20 material-ui / bootstrap is used  
+**Extra scope**  
+`+` 10 Confidence of the project presentation;  
+`+` 30 Project is made using gatsbyjs;  
+`+` 20 contentful / netlify cms is used for content management;  
+`+` 10 Portal has third language;  
+**Fines**  
+`-` -100 if there are less than 5 commits from each active team member. Everyone should merge their own PRs  
+`-` up to -50 points for violations stage2-tasks-requirements  
+`-` -40 if there is no worklog for team  
+`-` -20 too primitive (ugly for 2019) design / UX  
+## Total: 240
