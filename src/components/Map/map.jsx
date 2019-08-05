@@ -4,7 +4,7 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './map.css';
 
-export default function Map(geolocation) {
+export default function Map({ geolocation }) {
   const [viewport, setViewport] = useState({
     latitude: 53.906177,
     longitude: 27.554801,
@@ -12,7 +12,7 @@ export default function Map(geolocation) {
     width: '100%',
     height: '500px',
     mapboxApiAccessToken:
-    'pk.eyJ1IjoiaGhoMTM2MSIsImEiOiJjanlzYzQ5Y28waXRmM2JxZHhjNTRpaWVkIn0.1NlMRoyK2zoN8VMyGUx2ww',
+      'pk.eyJ1IjoiaGhoMTM2MSIsImEiOiJjanlzYzQ5Y28waXRmM2JxZHhjNTRpaWVkIn0.1NlMRoyK2zoN8VMyGUx2ww',
   });
 
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -23,9 +23,7 @@ export default function Map(geolocation) {
         setSelectedLocation(null);
       }
     };
-    // eslint-disable-next-line no-undef
     window.addEventListener('keydown', listener);
-    // eslint-disable-next-line no-undef
     return () => window.removeEventListener('keydown', listener);
   });
 
@@ -38,7 +36,7 @@ export default function Map(geolocation) {
       }}
       mapStyle="mapbox://styles/hhh1361/cjyscupqd0gp31coac4osfz7j"
     >
-      {geolocation.geolocation.map(location => (
+      {geolocation.map(location => (
         <Marker
           key={location.id}
           latitude={location.latitude}
@@ -63,9 +61,7 @@ export default function Map(geolocation) {
             setSelectedLocation(null);
           }}
         >
-          <div>
-            {selectedLocation.description}
-          </div>
+          <div>{selectedLocation.description}</div>
         </Popup>
       ) : null}
     </ReactMapGL>
