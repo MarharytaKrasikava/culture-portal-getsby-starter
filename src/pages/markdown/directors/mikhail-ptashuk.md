@@ -78,13 +78,13 @@ youtube: Z_gRBoITbnU
 geolocation:
   - description: Mikhail Ptashuk Street in Minsk
     id: '1'
-    latitude: 53
-    longitude: 27
+    latitude: 53.835611
+    longitude: 27.593218
   - description: >-
       Street of Mikhail Ptashuk. Lyakhovichi, Lyakhovichi district, Brest
       region, Belarus
     id: '2'
-    latitude: 53
-    longitude: 26
+    latitude: 53.043586
+    longitude: 26.278139
 ---
 
