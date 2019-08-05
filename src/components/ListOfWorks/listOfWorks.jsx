@@ -2,7 +2,6 @@ import React from 'react';
 import './listOfWorks.css';
 
 export default function ListOfWorks(param) {
-  console.log(param);
   return (
     <table className="list_of_works_section" align="center">
       <caption>

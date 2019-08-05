@@ -22,6 +22,9 @@ color: rgb(44, 5, 5);
 .button {
   font-size: 2rem;
 }
+.exposition__container button{
+  margin-bottom: 20px;
+}
 
 .exposition__container div p {
 margin-top: 100px;
