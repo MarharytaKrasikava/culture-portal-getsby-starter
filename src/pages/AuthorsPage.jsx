@@ -7,28 +7,33 @@ import Search from '../components/Search/search';
 const authorsInfoEn = [
   {
     id: 1,
-    name: 'Vladimir Korsh-Sablin',
+    name: 'Uladzimir Korsh-Sablin',
     link: '/directors/en/KorshSablin',
   },
   {
     id: 2,
-    name: 'Mikhail Ptashuk',
+    name: 'Mikhas Ptashuk',
     link: '/directors/en/Ptashuk',
   },
   {
     id: 3,
-    name: 'Yurij Cvetkov',
+    name: 'Yury Cviatkou',
     link: '/directors/en/Tcvetkov',
   },
   {
     id: 4,
-    name: 'Viktor Turov',
+    name: 'Viktar Turau',
     link: '/directors/en/Turov',
   },
   {
     id: 5,
-    name: 'Valerij Rubinchik',
+    name: 'Valery Rubinchyk',
     link: '/directors/en/Rubinchik',
+  },
+  {
+    id: 6,
+    name: 'Yury Khashchavatski',
+    link: '/directors/en/Khashchavatski',
   },
 ];
 
@@ -58,6 +63,11 @@ const authorsInfoRu = [
     name: 'Валерий Рубинчик',
     link: '/directors/ru/Rubinchik',
   },
+  {
+    id: 6,
+    name: 'Юрий Хащеватский',
+    link: '/directors/en/Khashchavatski',
+  },
 ];
 
 const authorsInfoBe = [
@@ -85,6 +95,11 @@ const authorsInfoBe = [
     id: 5,
     name: 'Валерый Рубінчык',
     link: '/directors/en/Rubinchik',
+  },
+  {
+    id: 6,
+    name: 'Юрый Хашчавацкі',
+    link: '/directors/en/Khashchavatski',
   },
 ];
 
