@@ -1,43 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './Header/header';
 import Footer from './Footer/footer';
 import './layout.css';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
-        frontmatter {
-          siteTitle
-          footerTitle
-          github
-          listLitle
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <Header
-        siteTitle={data.markdownRemark.frontmatter.siteTitle}
-        listLitle={data.markdownRemark.frontmatter.listLitle}
-      />
-      <main>
-        {children}
-      </main>
-      <Footer
-        footerTitle={data.markdownRemark.frontmatter.footerTitle}
-        githubLink={data.markdownRemark.frontmatter.github}
-      />
-    </>
-  );
-};
+const Layout = ({
+  children, siteTitle, footerTitle, github, listLitle,
+}) => (
+  <>
+    <Header
+      siteTitle={siteTitle}
+      listLitle={listLitle}
+    />
+    <main>
+      {children}
+    </main>
+    <Footer
+      footerTitle={footerTitle}
+      githubLink={github}
+    />
+  </>
+);
 
 Layout.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+  footerTitle: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+  listLitle: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 

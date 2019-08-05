@@ -1,6 +1,6 @@
 ---
-lang: by
-path: /directors/by/Ptashuk
+lang: be
+path: /directors/be/Ptashuk
 imagepath: Authors/Ptashuk/Ptashuk.jpg
 type: director
 title: Міхаіл Пташук
