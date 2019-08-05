@@ -202,22 +202,22 @@
   </thead>
   <tbody>
     <tr>
-      <td></td>
+      <td>2h</td>
       <td>feat: add title 2 page<br>
           fix: title2page
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>2h</td>
+      <td>search for content information</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>5h</td>
+      <td>content translation</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>3h</td>
+      <td>adding translated content</td>
     </tr>
     <tr>
       <td></td>
