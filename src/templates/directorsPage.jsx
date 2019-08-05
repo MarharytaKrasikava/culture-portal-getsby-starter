@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import { graphql } from 'gatsby';
-// import Img from 'gatsby-image';
+import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import TimelineElement from '../components/Timeline/timeline';
@@ -14,7 +14,7 @@ import './directorsPage.css';
 
 export default function Template({ data }) {
   const { gallery } = data;
-  // const titleImage = data.titleImage.childImageSharp.fluid;
+  const titleImage = data.titleImage.childImageSharp.fluid;
   const [lang, setLang] = React.useState({
     value: localStorage.getItem('lang'),
   });
@@ -29,6 +29,12 @@ export default function Template({ data }) {
       transData = {
         director: data.directorEn,
         header: data.headerEn,
+      };
+      break;
+    case 'be':
+      transData = {
+        director: data.directorBe,
+        header: data.headerBe,
       };
       break;
     case 'ru':
@@ -67,7 +73,7 @@ export default function Template({ data }) {
       <div className="directors__container">
         <h1>{frontmatter.title}</h1>
         <div className="directors__image">
-          {/* <Img fluid={titleImage} alt="Gatsby Docs are awesome" /> */}
+          <Img fluid={titleImage} alt="Gatsby Docs are awesome" />
         </div>
         <div>
           <p className="directors__years">{frontmatter.directorsLifeYears}</p>
@@ -85,7 +91,7 @@ export default function Template({ data }) {
   );
 }
 export const pageQuery = graphql`
-  query($path: String!, $gallery: String!, $pathEn: String!, $pathRu: String!) {
+  query($path: String!, $imagepath: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
     director: markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
@@ -110,6 +116,29 @@ export const pageQuery = graphql`
       }
     }
     directorEn: markdownRemark(frontmatter: { path: { eq: $pathEn } }) {
+      frontmatter {
+        title
+        directorsLifeYears
+        directorsInfo
+        timeline {
+          date
+          description
+        }
+        listOfWorks {
+          id
+          year
+          film
+        }
+        youtube
+        geolocation {
+          id
+          latitude
+          longitude
+          description
+        }
+      }
+    }
+    directorBe: markdownRemark(frontmatter: { path: { eq: $pathBe } }) {
       frontmatter {
         title
         directorsLifeYears
@@ -187,17 +216,15 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
-`;
-
-
-/* $imagepath: String! titleImage: file(relativePath: { eq: $imagepath }) {
+    titleImage: file(relativePath: { eq: $imagepath }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
-    } */
+    }
+  }
+`;
 
 Template.propTypes = {
   data: PropTypes.shape({

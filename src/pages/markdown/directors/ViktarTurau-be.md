@@ -1,6 +1,6 @@
 ---
-lang: by
-path: /directors/by/Turov
+lang: be
+path: /directors/be/Turov
 imagepath: Authors/Turov/turov-logo.jpg
 type: director
 title: Віктар Тураў

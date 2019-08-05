@@ -66,7 +66,7 @@ const authorsInfoRu = [
   {
     id: 6,
     name: 'Юрий Хащеватский',
-    link: '/directors/en/Khashchavatski',
+    link: '/directors/ru/Khashchavatski',
   },
 ];
 
@@ -74,32 +74,32 @@ const authorsInfoBe = [
   {
     id: 1,
     name: 'Уладзімір Корш-Саблін',
-    link: '/directors/en/KorshSablin',
+    link: '/directors/be/KorshSablin',
   },
   {
     id: 2,
     name: 'Міхаіл Пташук',
-    link: '/directors/en/Ptashuk',
+    link: '/directors/be/Ptashuk',
   },
   {
     id: 3,
     name: 'Юрый Цвяткоў',
-    link: '/directors/en/Tcvetkov',
+    link: '/directors/be/Tcvetkov',
   },
   {
     id: 4,
     name: 'Віктар Тураў',
-    link: '/directors/en/Turov',
+    link: '/directors/be/Turov',
   },
   {
     id: 5,
     name: 'Валерый Рубінчык',
-    link: '/directors/en/Rubinchik',
+    link: '/directors/be/Rubinchik',
   },
   {
     id: 6,
     name: 'Юрый Хашчавацкі',
-    link: '/directors/en/Khashchavatski',
+    link: '/directors/be/Khashchavatski',
   },
 ];
 

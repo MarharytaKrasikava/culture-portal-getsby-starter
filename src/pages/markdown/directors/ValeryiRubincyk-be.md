@@ -1,6 +1,6 @@
 ---
-lang: by
-path: /directors/by/Rubinchik
+lang: be
+path: /directors/be/Rubinchik
 imagepath: Authors/Rubinchik/rubinchik.jpg
 type: director
 title: Валерый Рубінчык
