@@ -1,6 +1,6 @@
 ---
-lang: by
-path: /directors/by/KorshSablin
+lang: be
+path: /directors/be/KorshSablin
 imagepath: Authors/KorshSablin/KorshSablin.jpg
 type: director
 title: Уладзімір Уладзіміравіч Корш-Саблін

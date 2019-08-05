@@ -33,6 +33,9 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           imagepath: node.frontmatter.imagepath,
           gallery: `Authors\\${node.frontmatter.gallery}\\gallery`,
+          pathEn: `${node.frontmatter.path.substr(0, 11)}en${node.frontmatter.path.substr(13)}`,
+          pathBe: `${node.frontmatter.path.substr(0, 11)}be${node.frontmatter.path.substr(13)}`,
+          pathRu: `${node.frontmatter.path.substr(0, 11)}ru${node.frontmatter.path.substr(13)}`,
         }, // additional data can be passed via context
       });
     });

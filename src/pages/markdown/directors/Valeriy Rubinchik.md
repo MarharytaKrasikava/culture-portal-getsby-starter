@@ -74,7 +74,7 @@ listOfWorks:
   - film: Cultural trip to the theater
     id: '6'
     year: '1982'
-  - film: 'Comic Lover, or Sir John Falstaff's Love Affair'
+  - film: "Comic Lover, or Sir John Falstaff's Love Affair"
     id: '7'
     year: '1983'
   - film: Dislike

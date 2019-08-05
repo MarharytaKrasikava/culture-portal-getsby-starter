@@ -3,6 +3,7 @@
     color: var(--color-white);
     width: 100%;
     text-align: center;
+    z-index: 5;
 }
 .section--info {
     background-color: rgb(97, 97, 97);

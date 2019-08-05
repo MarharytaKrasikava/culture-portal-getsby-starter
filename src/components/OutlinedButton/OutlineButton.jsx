@@ -21,7 +21,6 @@ const useStyles = makeStyles(() => ({
 export default function OutlinedButtons(props) {
   const classes = useStyles();
   const { to, css, text } = props;
-  console.log(props);
   return (
     <Button variant="outlined" className={classes.button}>
       <Link to={to} className={css}>

@@ -1,6 +1,6 @@
 ---
-lang: by
-path: /directors/by/Tcvetkov
+lang: be
+path: /directors/be/Tcvetkov
 imagepath: Authors/Tcvetkov/Tcvetkov.jpg
 type: director
 title: Юрый Цвяткоў
@@ -72,7 +72,7 @@ youtube: KOiFtho8LO8
 geolocation:
   - description: No data
     id: '1'
-    latitude: 53
-    longitude: 27
+    latitude: 53.922589
+    longitude: 27.601054
 ---
 
