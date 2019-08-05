@@ -157,8 +157,8 @@
       <td>feat: restore map scroll/swipe functionality</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>6h</td>
+      <td>feat: style/adaptive fix, multi-language fix</td>
     </tr>
   </tbody>
 </table>
