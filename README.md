@@ -114,39 +114,39 @@
   </thead>
   <tbody>
     <tr>
-      <td>3</td>
+      <td>3h</td>
       <td>feat: add timeline component</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>1h</td>
       <td>feat: add colors array, propTypes bug fix</td>
     </tr>
     <tr>
-      <td>4</td>
+      <td>2h</td>
       <td>feat: add video widget</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td>3h</td>
       <td>feat: add geo widget</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>2h</td>
       <td>feat: add youtube modal window component</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>1h</td>
       <td>feat: add listOfWorks component</td>
     </tr>
     <tr>
-      <td>6</td>
+      <td>6h</td>
       <td>feat: second page styles and adaptive</td>
     </tr>
     <tr>
-      <td>5</td>
+      <td>5h</td>
       <td>feat: first page styles and adaptive</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>1h</td>
       <td>feat: restore map scroll/swipe functionality</td>
     </tr>
     <tr>
