@@ -97,11 +97,11 @@ youtube: 2juET6V3YpM
 geolocation:
   - description: 'Viktor Turov Street, Minsk, Belarus'
     id: '1'
-    latitude: 53
-    longitude: 27
+    latitude: 53.838847
+    longitude: 27.596003
   - description: 'Turov street, Mogilev, Belarus'
     id: '2'
-    latitude: 53
-    longitude: 30
+    latitude: 53.945428
+    longitude: 30.362203
 ---
 

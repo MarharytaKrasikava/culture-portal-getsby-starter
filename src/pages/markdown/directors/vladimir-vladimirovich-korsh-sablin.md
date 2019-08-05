@@ -91,17 +91,17 @@ youtube: g1qkRRX6aKc
 geolocation:
   - description: Street named after Vladimir Korsh-Sablin in Minsk
     id: '1'
-    latitude: 53
-    longitude: 27
+    latitude: 53.937324
+    longitude: 27.587685
   - description: >-
       Most of his life he lived and worked in the Belarusfilm film studio in
       Minsk
     id: '2'
-    latitude: 53
-    longitude: 27
+    latitude: 53.92698
+    longitude: 27.630014
   - description: He grew up and graduated from the theater school in Moscow
     id: '3'
-    latitude: 55
-    longitude: 37
+    latitude: 55.755814
+    longitude: 37.617635
 ---
 
