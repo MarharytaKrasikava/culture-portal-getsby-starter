@@ -30,10 +30,10 @@ export default function Map({ geolocation }) {
   return (
     <ReactMapGL
       {...viewport}
-      onViewportChange={() => {
+        // eslint-disable-next-line no-shadow
+      onViewportChange={(viewport) => {
         setViewport(viewport);
       }}
-      style={{ paddingBottom: '50px' }}
       mapStyle="mapbox://styles/hhh1361/cjyscupqd0gp31coac4osfz7j"
     >
       {geolocation.map(location => (
@@ -74,7 +74,7 @@ Map.propTypes = {
     latitude: PropTypes.number,
     longitude: PropTypes.number,
     description: PropTypes.string,
-  }))
+  })),
 };
 
 Map.defaultProps = {
