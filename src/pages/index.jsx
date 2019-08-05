@@ -12,8 +12,30 @@ localStorage.setItem('lang', 'be');
 const IndexPage = () => {
   const query = useStaticQuery(graphql`
     query SiteMainTitleQueryBe {
-      dayDirectorEn: markdownRemark(
+      dayDirectorRu: markdownRemark(
         frontmatter: { title: { eq: "Владимир Владимирович Корш-Саблин" } }
+      ) {
+        frontmatter {
+          title
+          directorsLifeYears
+          directorsInfo
+          titleText
+          imagepath
+        }
+      }
+      dayDirectorBe: markdownRemark(
+        frontmatter: { title: { eq: "Уладзімір Уладзіміравіч Корш-Саблін" } }
+      ) {
+        frontmatter {
+          title
+          directorsLifeYears
+          directorsInfo
+          titleText
+          imagepath
+        }
+      }
+  		dayDirectorEn: markdownRemark(
+        frontmatter: { title: { eq: "Vladimir Vladimirovich Korsh-Sablin" } }
       ) {
         frontmatter {
           title
@@ -53,21 +75,34 @@ const IndexPage = () => {
           listLitle
         }
       }
-      cardsEn: allMarkdownRemark(
-        sort: { fields: [frontmatter___number] }
-        filter: { frontmatter: { title: { eq: "card" } } }
+      infoRu: markdownRemark(
+        frontmatter: { title: { eq: "info" }, lang: { eq: "ru" } }
       ) {
-        edges {
-          node {
-            frontmatter {
-              github
-              name
-              number
-              path
-              photo
-              title
-            }
-          }
+        frontmatter {
+          mainTitle
+          text
+          dayDirectorTitle
+          infoTitle
+          descLine1
+          descLine2
+          descLine3
+          descLine4
+          descLine5
+          descLine6
+          descLine7
+        }
+      }
+      homepageRu: markdownRemark(
+        frontmatter: { title: { eq: "homepage" }, lang: { eq: "ru" } }
+      ) {
+        frontmatter {
+          button
+          developers
+          seoTitle
+          siteTitle
+          footerTitle
+          github
+          listLitle
         }
       }
       infoEn: markdownRemark(
@@ -101,6 +136,23 @@ const IndexPage = () => {
           listLitle
         }
       }
+      cardsEn: allMarkdownRemark(
+        sort: { fields: [frontmatter___number] }
+        filter: { frontmatter: { title: { eq: "card" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              github
+              name
+              number
+              path
+              photo
+              title
+            }
+          }
+        }
+      }
     }
   `);
   const [lang, setLang] = React.useState({
@@ -110,7 +162,6 @@ const IndexPage = () => {
     setLang({ value: event.target.value });
     localStorage.setItem('lang', event.target.value);
   }
-  console.log(lang);
   let data;
   switch (lang.value) {
     case 'en':
@@ -121,12 +172,20 @@ const IndexPage = () => {
         dayDirector: query.dayDirectorEn,
       };
       break;
+    case 'ru':
+      data = {
+        homepage: query.homepageRu,
+        info: query.infoRu,
+        cards: query.cardsEn,
+        dayDirector: query.dayDirectorRu,
+      };
+      break;
     case 'be':
       data = {
         homepage: query.homepageBe,
         info: query.infoBe,
         cards: query.cardsEn,
-        dayDirector: query.dayDirectorEn,
+        dayDirector: query.dayDirectorBe,
       };
       break;
     default:
@@ -137,6 +196,8 @@ const IndexPage = () => {
         dayDirector: query.dayDirectorEn,
       };
   }
+
+  console.log(data);
 
   const listStyles = {
     position: 'absolute',

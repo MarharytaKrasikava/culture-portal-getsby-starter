@@ -77,7 +77,7 @@
       </td>
     </tr>
     <tr>
-      <td>12h</td>
+      <td>15h</td>
       <td>feat: load content through template<br>
           feat: add timeline to markdown + config<br>
           feat: dynamicall loading image
@@ -98,8 +98,15 @@
       </td>
     </tr>
     <tr>
+      <td>18h</td>
+      <td>feat: add translation feature<br>
+          feat: add on additional film director<br>
+          fix: translation bugs
+      </td>
+    </tr>
+    <tr>
+      <td>75h</td>
       <td>Total:</td>
-      <td>52h</td>
     </tr>
   </tbody>
 </table>

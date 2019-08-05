@@ -4,7 +4,7 @@ path: /directors/en/Turov
 imagepath: Authors/Turov/turov-logo.jpg
 type: director
 title: Victor Turov
-city: Minsk
+city: Mogilev
 titleText: >-
   During his short creative life, Viktor Turov made 26 films that represent the
   golden fund of Belarusian cinema.
