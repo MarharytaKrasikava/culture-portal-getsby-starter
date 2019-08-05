@@ -4,36 +4,47 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Search from '../components/Search/search';
 
+const windowGlobal = typeof window !== 'undefined' && window;
+if (windowGlobal.localStorage) {
+  windowGlobal.localStorage.setItem('lang', 'be');
+}
+
 const authorsInfoEn = [
   {
     id: 1,
     name: 'Uladzimir Korsh-Sablin',
     link: '/directors/en/KorshSablin',
+    city: 'Minsk',
   },
   {
     id: 2,
     name: 'Mikhas Ptashuk',
     link: '/directors/en/Ptashuk',
+    city: 'Brest',
   },
   {
     id: 3,
     name: 'Yury Cviatkou',
     link: '/directors/en/Tcvetkov',
+    city: 'Pskov',
   },
   {
     id: 4,
     name: 'Viktar Turau',
     link: '/directors/en/Turov',
+    city: 'Mogilev',
   },
   {
     id: 5,
     name: 'Valery Rubinchyk',
     link: '/directors/en/Rubinchik',
+    city: 'Brest',
   },
   {
     id: 6,
     name: 'Yury Khashchavatski',
     link: '/directors/en/Khashchavatski',
+    city: 'Odessa',
   },
 ];
 
@@ -42,31 +53,37 @@ const authorsInfoRu = [
     id: 1,
     name: 'Владимир Корш-Саблин',
     link: '/directors/ru/KorshSablin',
+    city: 'Минск',
   },
   {
     id: 2,
     name: 'Михаил Пташук',
     link: '/directors/ru/Ptashuk',
+    city: 'Брест',
   },
   {
     id: 3,
     name: 'Юрий Цветков',
     link: '/directors/ru/Tcvetkov',
+    city: 'Псков',
   },
   {
     id: 4,
     name: 'Виктор Туров',
     link: '/directors/ru/Turov',
+    city: 'Могилев',
   },
   {
     id: 5,
     name: 'Валерий Рубинчик',
     link: '/directors/ru/Rubinchik',
+    city: 'Брест',
   },
   {
     id: 6,
     name: 'Юрий Хащеватский',
     link: '/directors/ru/Khashchavatski',
+    city: 'Одесса',
   },
 ];
 
@@ -75,31 +92,37 @@ const authorsInfoBe = [
     id: 1,
     name: 'Уладзімір Корш-Саблін',
     link: '/directors/be/KorshSablin',
+    city: 'Менск',
   },
   {
     id: 2,
     name: 'Міхаіл Пташук',
     link: '/directors/be/Ptashuk',
+    city: 'Бярэсце',
   },
   {
     id: 3,
     name: 'Юрый Цвяткоў',
     link: '/directors/be/Tcvetkov',
+    city: 'Пскоў',
   },
   {
     id: 4,
     name: 'Віктар Тураў',
     link: '/directors/be/Turov',
+    city: 'Магілёў',
   },
   {
     id: 5,
     name: 'Валерый Рубінчык',
     link: '/directors/be/Rubinchik',
+    city: 'Бярэсце',
   },
   {
     id: 6,
     name: 'Юрый Хашчавацкі',
     link: '/directors/be/Khashchavatski',
+    city: 'Адэса',
   },
 ];
 
@@ -133,11 +156,12 @@ const SecondPage = () => {
     }
   `);
   const [lang, setLang] = React.useState({
-    value: localStorage.getItem('lang'),
+    value: windowGlobal.localStorage
+      ? windowGlobal.localStorage.getItem('lang') : null,
   });
   function handleChoice(event) {
     setLang({ value: event.target.value });
-    localStorage.setItem('lang', event.target.value);
+    windowGlobal.localStorage.setItem('lang', event.target.value);
   }
   let authorsInfo;
   let headerInfo;

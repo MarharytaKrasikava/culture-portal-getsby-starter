@@ -51,55 +51,62 @@
   </thead>
   <tbody>
     <tr>
-      <td></td>
+      <td>8h</td>
       <td>feat:<br>
           developers section<br>
           add content
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td>2h</td>
       <td>refactor: split section Developers on two components</td>
     </tr>
     <tr>
-      <td></td>
+      <td>2h</td>
       <td>refactor: change homepage colors<br>
           docs: add markdown files for cards<br>
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td>10h</td>
       <td>feat: loading content for Card component from .md files</td>
     </tr>
     <tr>
-      <td></td>
+      <td>8h</td>
       <td>feat: move content of the homepage to .md-files<br>
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td>15h</td>
       <td>feat: load content through template<br>
           feat: add timeline to markdown + config<br>
           feat: dynamicall loading image
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td>5h</td>
       <td>feat: add all necessary components to template<br>
           feat: template for netlify<br>
           feat: add lang to netlify template
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td>5h</td>
       <td>add SEO component to template<br>
           feat: synchronize content with the template<br>
           fix: add responsive layout for homepage
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>18h</td>
+      <td>feat: add translation feature<br>
+          feat: add on additional film director<br>
+          fix: translation bugs
+      </td>
+    </tr>
+    <tr>
+      <td>75h</td>
+      <td>Total:</td>
     </tr>
   </tbody>
 </table>
