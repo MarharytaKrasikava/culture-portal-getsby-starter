@@ -7,7 +7,7 @@ import Info from '../components/Info/info';
 import DayAuthor from '../components/DayAuthor/dayAuthor';
 import Developers from '../components/Developers/developers';
 
-localStorage.setItem('lang', 'en');
+localStorage.setItem('lang', 'be');
 
 const IndexPage = () => {
   const query = useStaticQuery(graphql`
@@ -47,6 +47,10 @@ const IndexPage = () => {
           button
           developers
           seoTitle
+          siteTitle
+          footerTitle
+          github
+          listLitle
         }
       }
       cardsEn: allMarkdownRemark(
@@ -91,14 +95,22 @@ const IndexPage = () => {
           button
           developers
           seoTitle
+          siteTitle
+          footerTitle
+          github
+          listLitle
         }
       }
     }
   `);
-  const [lang, setLang] = React.useState('be');
+  const [lang, setLang] = React.useState({
+    value: localStorage.getItem('lang'),
+  });
   function handleChoice(event) {
     setLang({ value: event.target.value });
+    localStorage.setItem('lang', event.target.value);
   }
+  console.log(lang);
   let data;
   switch (lang.value) {
     case 'en':
@@ -133,12 +145,17 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout
+      siteTitle={data.homepage.frontmatter.siteTitle}
+      footerTitle={data.homepage.frontmatter.footerTitle}
+      github={data.homepage.frontmatter.github}
+      listLitle={data.homepage.frontmatter.listLitle}
+    >
       <SEO title={data.homepage.frontmatter.seoTitle} />
       <select style={listStyles} value={lang.value} onChange={handleChoice}>
-        <option value="en">EN</option>
-        <option value="be">BE</option>
-        <option value="ru">RU</option>
+        <option value="en">en</option>
+        <option value="be">be</option>
+        <option value="ru">ru</option>
       </select>
       <Main
         mainTitle={data.info.frontmatter.mainTitle}
