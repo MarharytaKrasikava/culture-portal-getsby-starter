@@ -12,17 +12,23 @@ import Map from '../components/Map/map';
 import '../components/layout.css';
 import './directorsPage.css';
 
+const windowGlobal = typeof window !== 'undefined' && window;
+
+if (windowGlobal.localStorage) {
+  windowGlobal.localStorage.setItem('lang', 'be');
+}
+
 export default function Template({ data }) {
   const { gallery } = data;
   const titleImage = data.titleImage.childImageSharp.fluid;
   const [lang, setLang] = React.useState({
-    value: localStorage.getItem('lang'),
+    value: windowGlobal.localStorage
+      ? windowGlobal.localStorage.getItem('lang') : 'en',
   });
   function handleChoice(event) {
     setLang({ value: event.target.value });
-    localStorage.setItem('lang', event.target.value);
+    windowGlobal.localStorage.setItem('lang', event.target.value);
   }
-  console.log(lang);
   let transData;
   switch (lang.value) {
     case 'en':

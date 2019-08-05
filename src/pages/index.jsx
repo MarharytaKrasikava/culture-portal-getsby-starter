@@ -7,7 +7,11 @@ import Info from '../components/Info/info';
 import DayAuthor from '../components/DayAuthor/dayAuthor';
 import Developers from '../components/Developers/developers';
 
-localStorage.setItem('lang', 'be');
+const windowGlobal = typeof window !== 'undefined' && window;
+
+if (windowGlobal.localStorage) {
+  windowGlobal.localStorage.setItem('lang', 'be');
+}
 
 const IndexPage = () => {
   const query = useStaticQuery(graphql`
@@ -34,7 +38,7 @@ const IndexPage = () => {
           imagepath
         }
       }
-  		dayDirectorEn: markdownRemark(
+      dayDirectorEn: markdownRemark(
         frontmatter: { title: { eq: "Vladimir Vladimirovich Korsh-Sablin" } }
       ) {
         frontmatter {
@@ -124,7 +128,7 @@ const IndexPage = () => {
         }
       }
       homepageEn: markdownRemark(
-        frontmatter: { title: { eq: "homepage" }, lang: { eq: "en" } }
+        frontmatter: { title: { eq: "homepage" }, lang: { eq: "be" } }
       ) {
         frontmatter {
           button
@@ -156,11 +160,12 @@ const IndexPage = () => {
     }
   `);
   const [lang, setLang] = React.useState({
-    value: localStorage.getItem('lang'),
+    value: windowGlobal.localStorage
+      ? windowGlobal.localStorage.getItem('lang') : 'en',
   });
   function handleChoice(event) {
     setLang({ value: event.target.value });
-    localStorage.setItem('lang', event.target.value);
+    windowGlobal.localStorage.setItem('lang', event.target.value);
   }
   let data;
   switch (lang.value) {
@@ -196,8 +201,6 @@ const IndexPage = () => {
         dayDirector: query.dayDirectorEn,
       };
   }
-
-  console.log(data);
 
   const listStyles = {
     position: 'absolute',
