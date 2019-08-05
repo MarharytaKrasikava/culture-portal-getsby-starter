@@ -1,13 +1,9 @@
 .directors__container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.7;
   padding: 50px 0;
-  background-image: linear-gradient(to top, #532626 0%, #b1acaa 30%, #fffcf7 100%);
-  background: linear-gradient(to bottom, #f3ebeb, #758b91);
   background: linear-gradient(to bottom, #e6dada, #274046);
 }
 
@@ -17,19 +13,39 @@
 }
 
 .directors__info {
-  max-width: 1400px;
+  width: 1440px;
   text-align: justify;
   margin: auto;
 }
 
 .directors__image {
+  max-width: 480px;
   min-width: 320px;
+  margin: auto;
   border: 2px solid rgb(59, 22, 22)
 }
 @media (max-width: 1440px) {
   .directors__info {
-    width: 95%;
+    width: 800px;
     margin: auto;
+  }
+
+}
+@media (max-width: 800px) {
+  .directors__info {
+    width: 480px;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .directors__info {
+    width: 300px;
+    margin: auto;
+  }
+  .directors__years {
+    font-size: 1.4rem;
   }
 
 }

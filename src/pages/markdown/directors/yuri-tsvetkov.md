@@ -72,6 +72,7 @@ listOfWorks:
     year: '1978'
 gallery: Tcvetkov
 youtube: KOiFtho8LO8
+filmography: Filmography
 geolocation:
   - description: No data
     id: '1'

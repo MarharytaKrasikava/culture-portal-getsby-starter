@@ -204,8 +204,8 @@ const IndexPage = () => {
 
   const listStyles = {
     position: 'absolute',
-    top: '20px',
-    left: '200px',
+    top: '50px',
+    left: '0px',
   };
 
   return (

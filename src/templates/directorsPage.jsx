@@ -59,8 +59,8 @@ export default function Template({ data }) {
   const { frontmatter } = director;
   const listStyles = {
     position: 'absolute',
-    top: '20px',
-    left: '200px',
+    top: '50px',
+    left: '0px',
   };
   return (
     <Layout
@@ -85,7 +85,7 @@ export default function Template({ data }) {
           <p className="directors__info">{frontmatter.directorsInfo}</p>
           <div className="timeline_listOfWorks" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             <TimelineElement timeline={frontmatter.timeline} />
-            <ListOfWorks listOfWorks={frontmatter.listOfWorks} />
+            <ListOfWorks listOfWorks={frontmatter.listOfWorks} filmography={frontmatter.filmography} />
           </div>
           <Gallery edges={gallery.edges} />
           <YoutubeModalWindow youtube={frontmatter.youtube} />
@@ -112,6 +112,7 @@ export const pageQuery = graphql`
           film
         }
         youtube
+        filmography
         geolocation {
           id
           latitude
@@ -135,6 +136,7 @@ export const pageQuery = graphql`
           film
         }
         youtube
+        filmography
         geolocation {
           id
           latitude
@@ -158,6 +160,7 @@ export const pageQuery = graphql`
           film
         }
         youtube
+        filmography
         geolocation {
           id
           latitude
@@ -181,6 +184,7 @@ export const pageQuery = graphql`
           film
         }
         youtube
+        filmography
         geolocation {
           id
           latitude

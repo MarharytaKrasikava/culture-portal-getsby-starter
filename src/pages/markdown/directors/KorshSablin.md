@@ -85,6 +85,7 @@ listOfWorks:
     year: '1970'
 gallery: KorshSablin
 youtube: g1qkRRX6aKc
+filmography: Фильмография
 geolocation:
   - description: Улица имени Владимира Корш-Саблина в г. Минске
     id: '1'
