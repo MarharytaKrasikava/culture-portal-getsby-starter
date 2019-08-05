@@ -2,14 +2,14 @@
 lang: en
 title: info
 mainTitle: Film directors of Belarus
-descLine1: Данный ресурс содержит справочную информацию о выдающихся Белорусских кинорежиссерах.
-descLine2: По выбранным режиссерам здесь вы найдёте :.
-descLine3: краткая биографическая информация
-descLine4: значимые даты
-descLine5: фильмография
-descLine6: фото и видео материалы
-descLine7: места на карте, имеющие отношение к режиссеру
+descLine1: This resource contains background information about outstanding Belarusian filmmakers.
+descLine2: For selected directors you will find here :.
+descLine3: brief biographical information
+descLine4: significant dates
+descLine5: filmography
+descLine6: photo and video materials
+descLine7: places on the map related to the director
 dayDirectorTitle: Author of the day
 infoTitle: About this project
-text: Первую награду – почетный диплом международной выставки в Париже – получил детский музыкальный фильм «Концерт Бетховена» на музыку Исаака Дунаевского. А самой кассовой белорусской картиной стала молодежная социальная драма «Меня зовут Арлекино» Валерия Рыбарева (1987). По результатам прокатов в кинотеатрах на территории бывшего СССР за 15 месяцев лента собрала 42 миллиона зрителей – это абсолютный рекорд. На втором месте – комедия Игоря Добролюбова «Белые Росы» (1983). На третьем – детский приключенческий фильм «Девочка ищет отца» режиссера Льва Голуба (1959), которую посмотрели почти 35,5 миллиона человек и показали в 83 странах (абсолютный географический лидер!). Кстати, окупаемым считается фильм, собравший минимум 16 – 20 миллионов зрителей. В истории нашего кино таких картин немного – около трех десятков. Всего же фильмотека музея насчитывает 550 игровых, 180 анимационных и около 3000 документальных лент. Многие белорусские картины завоевали народную любовь. Например, лирическая музыкальная комедия «Моя любовь» (1940) не сходила с экранов советских кинотеатров 30 лет. Ради положительных эмоций зрители снова и снова шли смотреть выдуманную историю с хеппи-эндом. 
+text: The first award - an honorary diploma of the international exhibition in Paris - was received by the children's musical film “Beethoven's Concert” to the music of Isaac Dunaevsky. And the highest-grossing Belarusian picture was the youth social drama “My Name is Arlekino” by Valery Rybarev (1987). According to the results of rentals in cinemas in the territory of the former USSR for 15 months, the tape attracted 42 million viewers - this is an absolute record. In second place is Igor Dobrolyubov’s comedy "Belye Rosy" (1983). On the third is the children's adventure film “A Girl Seeks a Father” directed by Lev Golub (1959), which was watched by almost 35.5 million people and shown in 83 countries (an absolute geographical leader!). By the way, a film is considered to be recouped, having gathered at least 16 - 20 million viewers. In the history of our cinema there are few such paintings - about three dozen. In total, the museum’s film library has 550 gaming, 180 animated and about 3,000 documentary films. Many Belarusian paintings won people's love. For example, the lyrical musical comedy “My Love” (1940) has not left the screens of Soviet cinemas for 30 years. For the sake of positive emotions, the audience again and again went to watch a fictional story with a happy end.
 ---

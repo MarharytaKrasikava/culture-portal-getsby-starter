@@ -13,13 +13,63 @@ import '../components/layout.css';
 import './directorsPage.css';
 
 export default function Template({ data }) {
-  const { director } = data;
-  const { frontmatter } = director;
   const { gallery } = data;
   const titleImage = data.titleImage.childImageSharp.fluid;
+  const [lang, setLang] = React.useState({
+    value: localStorage.getItem('lang'),
+  });
+  function handleChoice(event) {
+    setLang({ value: event.target.value });
+    localStorage.setItem('lang', event.target.value);
+  }
+  console.log(lang);
+  let transData;
+  switch (lang.value) {
+    case 'en':
+      transData = {
+        director: data.directorEn,
+        header: data.headerEn,
+      };
+      break;
+    case 'be':
+      transData = {
+        director: data.directorBe,
+        header: data.headerBe,
+      };
+      break;
+    case 'ru':
+      transData = {
+        director: data.directorRu,
+        header: data.headerRu,
+      };
+      break;
+    default:
+      transData = {
+        director: data.directorEn,
+        header: data.headerEn,
+      };
+  }
+  // console.log (data.directorEn);
+  const { director } = transData;
+  const { frontmatter } = director;
+  const listStyles = {
+    position: 'absolute',
+    top: '20px',
+    left: '200px',
+  };
   return (
-    <Layout>
+    <Layout
+      siteTitle={transData.header.frontmatter.siteTitle}
+      footerTitle={transData.header.frontmatter.footerTitle}
+      github={transData.header.frontmatter.github}
+      listLitle={transData.header.frontmatter.listLitle}
+    >
       <SEO title={frontmatter.title} />
+      <select style={listStyles} value={lang.value} onChange={handleChoice}>
+        <option value="en">en</option>
+        <option value="be">be</option>
+        <option value="ru">ru</option>
+      </select>
       <div className="directors__container">
         <h1>{frontmatter.title}</h1>
         <div className="directors__image">
@@ -41,7 +91,7 @@ export default function Template({ data }) {
   );
 }
 export const pageQuery = graphql`
-  query($path: String!, $imagepath: String!, $gallery: String!) {
+  query($path: String!, $imagepath: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
     director: markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
@@ -63,6 +113,99 @@ export const pageQuery = graphql`
           longitude
           description
         }
+      }
+    }
+    directorEn: markdownRemark(frontmatter: { path: { eq: $pathEn } }) {
+      frontmatter {
+        title
+        directorsLifeYears
+        directorsInfo
+        timeline {
+          date
+          description
+        }
+        listOfWorks {
+          id
+          year
+          film
+        }
+        youtube
+        geolocation {
+          id
+          latitude
+          longitude
+          description
+        }
+      }
+    }
+    directorBe: markdownRemark(frontmatter: { path: { eq: $pathBe } }) {
+      frontmatter {
+        title
+        directorsLifeYears
+        directorsInfo
+        timeline {
+          date
+          description
+        }
+        listOfWorks {
+          id
+          year
+          film
+        }
+        youtube
+        geolocation {
+          id
+          latitude
+          longitude
+          description
+        }
+      }
+    }
+    directorRu: markdownRemark(frontmatter: { path: { eq: $pathRu } }) {
+      frontmatter {
+        title
+        directorsLifeYears
+        directorsInfo
+        timeline {
+          date
+          description
+        }
+        listOfWorks {
+          id
+          year
+          film
+        }
+        youtube
+        geolocation {
+          id
+          latitude
+          longitude
+          description
+        }
+      }
+    }
+    headerEn: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "en" }}) {
+      frontmatter {
+        siteTitle
+        footerTitle
+        github
+        listLitle
+      }
+    }
+    headerBe: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
+      frontmatter {
+        siteTitle
+        footerTitle
+        github
+        listLitle
+      }
+    }
+    headerRu: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "ru" }}) {
+      frontmatter {
+        siteTitle
+        footerTitle
+        github
+        listLitle
       }
     }
     gallery: allFile(filter: {relativeDirectory: {eq: $gallery }}) {
