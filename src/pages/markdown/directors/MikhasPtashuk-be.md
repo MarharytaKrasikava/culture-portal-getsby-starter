@@ -73,6 +73,7 @@ listOfWorks:
     year: '2001'
 gallery: Ptashuk
 youtube: Z_gRBoITbnU
+filmography: Фільмаграфія
 geolocation:
   - description: Вуліца Міхаіла Пташука ў г. Мінску
     id: '1'

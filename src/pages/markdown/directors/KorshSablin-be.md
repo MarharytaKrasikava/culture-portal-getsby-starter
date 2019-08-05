@@ -83,6 +83,7 @@ listOfWorks:
     year: '1970'
 gallery: KorshSablin
 youtube: g1qkRRX6aKc
+filmography: Фільмаграфія
 geolocation:
   - description: Вуліца імя Уладзіміра Корш-Саблін ў г. Мінску
     id: '1'

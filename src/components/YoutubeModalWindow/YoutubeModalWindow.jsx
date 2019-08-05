@@ -7,7 +7,7 @@ export default function YoutubeModalWindow(param) {
   return (
     <Popup
       // eslint-disable-next-line react/button-has-type
-      trigger={<button className="button"> Watch more </button>}
+      trigger={<button className="button" />}
       modal
       closeOnDocumentClick
     >

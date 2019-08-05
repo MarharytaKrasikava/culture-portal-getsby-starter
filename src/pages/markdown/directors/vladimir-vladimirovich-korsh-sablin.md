@@ -88,6 +88,7 @@ listOfWorks:
     year: '1970'
 gallery: KorshSablin
 youtube: g1qkRRX6aKc
+filmography: Filmography
 geolocation:
   - description: Street named after Vladimir Korsh-Sablin in Minsk
     id: '1'

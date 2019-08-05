@@ -80,6 +80,7 @@ listOfWorks:
     year: '2005'
 gallery: Rubinchik
 youtube: HPB8z_s3buU
+filmography: Фільмаграфія
 geolocation:
   - description: Вучыўся ў школе № 42 у Мінску
     id: '1'

@@ -62,6 +62,7 @@ listOfWorks:
     year: '2011'
 gallery: Khashchavatski
 youtube: bMtqkkjvcig
+filmography: Фильмография
 geolocation:
   - description: Площадь
     id: '1'
