@@ -6,6 +6,6 @@ siteTitle: BCJ.by
 button: Чытаць далей
 developers: Каманда распрацоўшчыкаў сайта
 footerTitle: Джунглі беларускага кіно
-listLitle: Спіс кінарэжысёраў
+listTitle: Спіс кінарэжысёраў
 github: https://github.com/vladislavkhlebec/culture-portal-getsby-starter
 ---

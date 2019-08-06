@@ -20,7 +20,7 @@ if (windowGlobal.localStorage) {
 
 export default function Template({ data }) {
   const { gallery } = data;
-  const titleImage = data.titleImage.childImageSharp.fluid;
+  // const titleImage = data.titleImage.childImageSharp.fluid;
   const [lang, setLang] = React.useState({
     value: windowGlobal.localStorage
       ? windowGlobal.localStorage.getItem('lang') : 'en',
@@ -67,7 +67,7 @@ export default function Template({ data }) {
       siteTitle={transData.header.frontmatter.siteTitle}
       footerTitle={transData.header.frontmatter.footerTitle}
       github={transData.header.frontmatter.github}
-      listLitle={transData.header.frontmatter.listLitle}
+      listTitle={transData.header.frontmatter.listTitle}
     >
       <SEO title={frontmatter.title} />
       <select style={listStyles} value={lang.value} onChange={handleChoice}>
@@ -78,7 +78,7 @@ export default function Template({ data }) {
       <div className="directors__container">
         <h1>{frontmatter.title}</h1>
         <div className="directors__image">
-          <Img fluid={titleImage} alt="Gatsby Docs are awesome" />
+          {/* <Img fluid={titleImage} alt="Gatsby Docs are awesome" /> */}
         </div>
         <div>
           <p className="directors__years">{frontmatter.directorsLifeYears}</p>
@@ -95,8 +95,10 @@ export default function Template({ data }) {
     </Layout>
   );
 }
+
+// , $imagepath: String!
 export const pageQuery = graphql`
-  query($path: String!, $imagepath: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
+  query($path: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
     director: markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
@@ -198,7 +200,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     headerBe: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
@@ -206,7 +208,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     headerRu: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "ru" }}) {
@@ -214,7 +216,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     gallery: allFile(filter: {relativeDirectory: {eq: $gallery }}) {
@@ -225,16 +227,16 @@ export const pageQuery = graphql`
         }
       }
     }
-    titleImage: file(relativePath: { eq: $imagepath }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `;
 
+/* titleImage: file(relativePath: { eq: $imagepath }) {
+  childImageSharp {
+    fluid {
+      ...GatsbyImageSharpFluid
+    }
+  }
+} */
 Template.propTypes = {
   data: PropTypes.shape({
     directorEn: PropTypes.shape({
@@ -275,7 +277,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     headerEn: PropTypes.shape({
@@ -283,7 +285,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     headerRu: PropTypes.shape({
@@ -291,7 +293,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     titleImage: PropTypes.shape({

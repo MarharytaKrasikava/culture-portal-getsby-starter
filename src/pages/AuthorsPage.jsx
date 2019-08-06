@@ -134,7 +134,7 @@ const SecondPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
       be: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
@@ -142,7 +142,7 @@ const SecondPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
       ru: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "ru" }}) {
@@ -150,7 +150,7 @@ const SecondPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
     }
@@ -200,14 +200,14 @@ const SecondPage = () => {
       siteTitle={headerInfo.homepage.frontmatter.siteTitle}
       footerTitle={headerInfo.homepage.frontmatter.footerTitle}
       github={headerInfo.homepage.frontmatter.github}
-      listLitle={headerInfo.homepage.frontmatter.listLitle}
+      listLitle={headerInfo.homepage.frontmatter.listTitle}
     >
       <select style={listStyles} value={lang.value} onChange={handleChoice}>
         <option value="en">en</option>
         <option value="be">be</option>
         <option value="ru">ru</option>
       </select>
-      <SEO title="Film Directors List" />
+      <SEO title={headerInfo.homepage.frontmatter.listTitle} />
       <Search authors={authorsInfo} />
     </Layout>
   );

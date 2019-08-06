@@ -5,7 +5,7 @@ import '../variables.css';
 import './Header.css';
 
 
-const Header = ({ siteTitle, listLitle }) => (
+const Header = ({ siteTitle, listTitle }) => (
   <header className="header">
     <div className="container header__container">
       <h3 className="title header__title">
@@ -14,7 +14,9 @@ const Header = ({ siteTitle, listLitle }) => (
         </Link>
       </h3>
       <nav className="navigation">
-        <Link to="/AuthorsPage/" className="link navigation__link"> {listLitle} </Link>
+        <Link to="/AuthorsPage/" className="link navigation__link">
+          {listTitle}
+        </Link>
       </nav>
     </div>
   </header>
@@ -22,9 +24,11 @@ const Header = ({ siteTitle, listLitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  listTitle: PropTypes.string,
 };
 Header.defaultProps = {
   siteTitle: '',
+  listTitle: '',
 };
 
 export default Header;
