@@ -19,8 +19,8 @@ class Search extends Component {
     const { search } = this.state;
     const { authors } = this.props;
     const filteredContacts = authors.filter(
-      author => author.name.indexOf(search) !== -1
-        || author.city.indexOf(search) !== -1,
+      author => author.name.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        || author.city.toLowerCase().indexOf(search.toLowerCase()) !== -1,
     );
     return (
       filteredContacts.map(author => <AuthorListItem author={author} key={author.id} />)
