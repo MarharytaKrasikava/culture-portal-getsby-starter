@@ -76,7 +76,7 @@ const IndexPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
       infoRu: markdownRemark(
@@ -106,7 +106,7 @@ const IndexPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
       infoEn: markdownRemark(
@@ -137,7 +137,7 @@ const IndexPage = () => {
           siteTitle
           footerTitle
           github
-          listLitle
+          listTitle
         }
       }
       cardsEn: allMarkdownRemark(
@@ -213,7 +213,7 @@ const IndexPage = () => {
       siteTitle={data.homepage.frontmatter.siteTitle}
       footerTitle={data.homepage.frontmatter.footerTitle}
       github={data.homepage.frontmatter.github}
-      listLitle={data.homepage.frontmatter.listLitle}
+      listTitle={data.homepage.frontmatter.listTitle}
     >
       <SEO title={data.homepage.frontmatter.seoTitle} />
       <select style={listStyles} value={lang.value} onChange={handleChoice}>

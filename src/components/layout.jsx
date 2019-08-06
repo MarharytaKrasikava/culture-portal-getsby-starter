@@ -7,12 +7,12 @@ import Footer from './Footer/footer';
 import './layout.css';
 
 const Layout = ({
-  children, siteTitle, footerTitle, github, listLitle,
+  children, siteTitle, footerTitle, github, listTitle,
 }) => (
   <>
     <Header
       siteTitle={siteTitle}
-      listLitle={listLitle}
+      listTitle={listTitle}
     />
     <main>
       {children}
@@ -28,7 +28,7 @@ Layout.propTypes = {
   siteTitle: PropTypes.string.isRequired,
   footerTitle: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
-  listLitle: PropTypes.string.isRequired,
+  listTitle: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 

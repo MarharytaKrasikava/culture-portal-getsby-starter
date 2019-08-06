@@ -67,7 +67,7 @@ export default function Template({ data }) {
       siteTitle={transData.header.frontmatter.siteTitle}
       footerTitle={transData.header.frontmatter.footerTitle}
       github={transData.header.frontmatter.github}
-      listLitle={transData.header.frontmatter.listLitle}
+      listTitle={transData.header.frontmatter.listTitle}
     >
       <SEO title={frontmatter.title} />
       <select style={listStyles} value={lang.value} onChange={handleChoice}>
@@ -198,7 +198,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     headerBe: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "be" }}) {
@@ -206,7 +206,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     headerRu: markdownRemark (frontmatter: {title: {eq: "homepage"}, lang: { eq: "ru" }}) {
@@ -214,7 +214,7 @@ export const pageQuery = graphql`
         siteTitle
         footerTitle
         github
-        listLitle
+        listTitle
       }
     }
     gallery: allFile(filter: {relativeDirectory: {eq: $gallery }}) {
@@ -275,7 +275,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     headerEn: PropTypes.shape({
@@ -283,7 +283,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     headerRu: PropTypes.shape({
@@ -291,7 +291,7 @@ Template.propTypes = {
         siteTitle: PropTypes.string,
         footerTitle: PropTypes.string,
         github: PropTypes.string,
-        listLitle: PropTypes.string,
+        listTitle: PropTypes.string,
       }),
     }),
     titleImage: PropTypes.shape({
