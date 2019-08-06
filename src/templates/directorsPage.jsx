@@ -98,7 +98,7 @@ export default function Template({ data }) {
 
 // , $imagepath: String!
 export const pageQuery = graphql`
-  query($path: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
+  query($path: String!, $imagepath: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
     director: markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
