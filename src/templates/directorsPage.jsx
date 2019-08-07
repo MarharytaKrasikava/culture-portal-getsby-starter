@@ -20,7 +20,7 @@ if (windowGlobal.localStorage) {
 
 export default function Template({ data }) {
   const { gallery } = data;
-  const titleImage = data.titleImage.childImageSharp.fluid;
+  // const titleImage = data.titleImage.childImageSharp.fluid;
   const [lang, setLang] = React.useState({
     value: windowGlobal.localStorage
       ? windowGlobal.localStorage.getItem('lang') : 'en',
@@ -78,7 +78,7 @@ export default function Template({ data }) {
       <div className="directors__container">
         <h1>{frontmatter.title}</h1>
         <div className="directors__image">
-          <Img fluid={titleImage} alt="Gatsby Docs are awesome" />
+          {/* <Img fluid={titleImage} alt="Gatsby Docs are awesome" /> */}
         </div>
         <div>
           <p className="directors__years">{frontmatter.directorsLifeYears}</p>
@@ -89,14 +89,14 @@ export default function Template({ data }) {
           </div>
           <Gallery edges={gallery.edges} />
           <YoutubeModalWindow youtube={frontmatter.youtube} />
-          <Map geolocation={frontmatter.geolocation} />
+          <Map geolocation={frontmatter.geolocation} className="directors__map" />
         </div>
       </div>
     </Layout>
   );
 }
 export const pageQuery = graphql`
-  query($path: String!, $imagepath: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
+  query($path: String!, $gallery: String!, $pathEn: String!, $pathRu: String!, $pathBe: String!) {
     director: markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
@@ -223,13 +223,6 @@ export const pageQuery = graphql`
           publicURL
           name
           id
-        }
-      }
-    }
-    titleImage: file(relativePath: { eq: $imagepath }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
         }
       }
     }

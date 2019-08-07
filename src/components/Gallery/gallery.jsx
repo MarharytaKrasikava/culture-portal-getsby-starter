@@ -5,17 +5,31 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import './gallery.css';
 
-const Gallery = ({ edges }) => (
-  <React.Fragment>
-    <Container className="gallery__container">
-      <Carousel showArrows showThumbs>
-        {edges.map(item => (
-          <img src={item.node.publicURL} alt={item.node.name} key={item.node.id} />
-        ))}
-      </Carousel>
-    </Container>
-  </React.Fragment>
-);
+const Gallery = ({ edges }) => {
+  const images = edges.map((image) => {
+    return {
+      url: image.node.publicURL,
+      name: image.node.name,
+      id: image.node.id,
+    };
+  });
+
+  return (
+    <React.Fragment>
+      <Container className="gallery__container">
+        <Carousel showArrows showThumbs>
+          {images.map(image => (
+            <img
+              src={image.url}
+              alt={image.name}
+              key={image.id}
+            />
+          ))}
+        </Carousel>
+      </Container>
+    </React.Fragment>
+  );
+};
 
 export default Gallery;
 
