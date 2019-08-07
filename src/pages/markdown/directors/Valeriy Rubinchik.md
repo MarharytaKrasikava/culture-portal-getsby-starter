@@ -1,5 +1,5 @@
 ---
-lang: en
+lang: ru
 path: /directors/ru/Rubinchik
 imagepath: Authors/Rubinchik/rubinchik.jpg
 type: director
