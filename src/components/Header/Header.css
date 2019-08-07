@@ -33,3 +33,11 @@
 body {
     overflow-x: hidden;
 }
+@media (max-width: 320px) {
+  .navigation__link {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 600;
+    text-align: right;
+  }
+}
