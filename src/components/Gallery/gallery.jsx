@@ -8,9 +8,9 @@ import './gallery.css';
 const Gallery = ({ edges }) => (
   <React.Fragment>
     <Container className="gallery__container">
-      <Carousel>
+      <Carousel showArrows showThumbs>
         {edges.map(item => (
-          <img src={item.node.publicURL} alt={item.node.name} key={item.node.name} />
+          <img src={item.node.publicURL} alt={item.node.name} key={item.node.id} />
         ))}
       </Carousel>
     </Container>

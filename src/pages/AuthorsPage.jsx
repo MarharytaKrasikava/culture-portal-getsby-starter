@@ -200,7 +200,7 @@ const SecondPage = () => {
       siteTitle={headerInfo.homepage.frontmatter.siteTitle}
       footerTitle={headerInfo.homepage.frontmatter.footerTitle}
       github={headerInfo.homepage.frontmatter.github}
-      listLitle={headerInfo.homepage.frontmatter.listTitle}
+      listTitle={headerInfo.homepage.frontmatter.listTitle}
     >
       <select style={listStyles} value={lang.value} onChange={handleChoice}>
         <option value="en">en</option>

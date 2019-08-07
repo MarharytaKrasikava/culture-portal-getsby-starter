@@ -222,6 +222,7 @@ export const pageQuery = graphql`
         node {
           publicURL
           name
+          id
         }
       }
     }
